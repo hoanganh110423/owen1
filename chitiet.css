@@ -310,7 +310,7 @@ h2{
     opacity: 0;/* ẩn ảnh*/
     text-align: center;
     line-height: 50px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }.product-gallrey-1-container-product-1 a:hover .name{
     bottom: 20%;/*nhảy lên 20% của div*/
     opacity: 1;
