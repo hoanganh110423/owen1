@@ -252,22 +252,10 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;/*hết dòng tự xuống*/
 }
-.product-gallrey-1-container-titler h1{  
-    text-align: center;
-    color: #5A75C2;
-    text-decoration: none;
-    background-color: #F5F5F5;
-    line-height: 60px;
-    height: 60px;
-    border-radius: 20px;
-}
 .product-gallrey-1-container-product-1{
     width: 20%;
     padding: 20px;
     cursor: pointer;
-}
-.product-gallrey-1-container-product-1:hover > a img {
-    transform: translateY(-16px);
 }
 .product-gallrey-1-container-product-1 img{
     width: 100%;
@@ -311,8 +299,8 @@ h2{
     text-align: center;
     line-height: 50px;
     transition: all 0.5s ease-in-out;
+    bottom: 20%;
 }.product-gallrey-1-container-product-1 a:hover .name{
-    bottom: 20%;/*nhảy lên 20% của div*/
     opacity: 1;
 }
 .salebackground img{
