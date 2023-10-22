@@ -252,6 +252,15 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;/*hết dòng tự xuống*/
 }
+.product-gallrey-1-container-titler h1{  
+    text-align: center;
+    color: #5A75C2;
+    text-decoration: none;
+    background-color: #F5F5F5;
+    line-height: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
 .product-gallrey-1-container-product-1{
     width: 20%;
     padding: 20px;
