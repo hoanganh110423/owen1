@@ -29,27 +29,17 @@
                                         <li><a href="ao.html">Áo len</a></li>
                                         <li><a href="ao.html">Áo veston</a></li>
                                         <li><a href="ao.html">Áo blazer</a></li>
-                                        <li><img src="image/logo ao.webp" alt="logo" style="width: 680px;
-                                            height: 366px;
-                                            position: absolute;
-                                            right: -610px;
-                                            top: -7px;"></li>
                                     </ul>
                                 </div> 
                             </li>
                             <li><a href="quan.html" style="color: #333;"> QUẦN</a>
                                 <div class="submenu2">
-                                    <ul>
+                                    <ul style="color: #333;">
                                         <li><a href="quan.html">Quần tây</a></li>
                                         <li><a href="quan.html">Quần short</a></li>
                                         <li><a href="quan.html">Quần khaki</a></li>
                                         <li><a href="quan.html">Quần jeans</a></li>
                                         <li><a href="quan.html">Quần jogger</a></li>
-                                        <li><img src="image/logoquan.webp" alt="logo" style="width: 600px;
-                                            height: 291px;
-                                            position: absolute;
-                                            right: -609px;
-                                            top: -10px;" ></li>
                                     </ul>
                                 </div> 
                             </li>
@@ -61,27 +51,16 @@
                                         <li><a href="phukien.html">Dây lưng</a></li>
                                         <li><a href="phukien.html">Ví</a></li>
                                         <li><a href="phukien.html">Cà vạt</a></li>
-                                        <li><img src="image/logophukien.webp" alt="logo" style="
-                                                width: 643px;
-                                                height: 292px;
-                                                position: absolute;
-                                                right: -547px;
-                                                top: -10px;"></li>
                                     </ul>
                                 </div> 
                             </li>
                             <li><a href="giatot.html" style="color: #333;"> GIÁ TỐT</a>
                                 <div class="submenu4">
-                                    <ul>
+                                    <ul style="color: #333;">
                                         <li><a href="giatot.html">Áo sơ mi</a></li>
                                         <li><a href="giatot.html">Polo giá tốt</a></li>
                                         <li><a href="giatot.html">quần giá tốt</a></li>
                                         <li><a href="giatot.html">Ưu đãi đặc biệt</a></li>
-                                        <li><img src="image/logogiatot.webp" alt="logo" style="width: 664px;
-                                            height: 253px;
-                                            position: absolute;
-                                            right: -610px;
-                                            top: -10px;"></li>
                                     </ul>
                                 </div> 
                             </li>
@@ -91,16 +70,15 @@
                             <li><a href=""><i class="fas fa-user"></i></a>
                                 <div class="submenu5">
                                     <ul>
-                                        <li><a href="phukien.html">Tài Khoản của tôi</a></li>
+                                        <li><a href="dangnhap.html">Tài Khoản của tôi</a></li>
                                         <li><a href="phukien.html">Danh sách yêu thích</a></li>
-                                        <li><a href="phukien.html">Đăng nhập</a></li>
-                                        <li><a href="phukien.html">Tạo tài khoản</a></li>
+                                        <li><a href="dangnhap.html">Đăng nhập</a></li>
+                                        <li><a href="dangky.html">Tạo tài khoản</a></li>
                                     </ul>
                                 </div> 
                             </li>
-                            <li><button><i class="fas fa-cart-plus"></i></button></li>
+                            <li><a href="viewcart.php"><i class="fas fa-cart-plus"></i></a></li>
                         </ul>
-
                     </div>
                 </div>
             </section>
@@ -132,104 +110,165 @@
                     </div>
                     <div class="product-gallrey-1-container-product">
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/hmv áo sơ mi.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a>
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>ÁO SƠ MI</li>
-                                <li><span>580.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet1.php">
+                                    <img src="image/ct1.1.webp" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a>
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>ÁO SƠ MI - AR230640DT</li>
+                                    <li><span>580.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct1.1.webp">
+                                    <input type="hidden" name="tensp" value="ÁO SƠ MI - AR230640DT">
+                                    <input type="hidden" name="gia" value="580000">
+                                    <input type="hidden" name="id" value="1">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/ao1.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a>
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>ÁO SƠ MI NAM </li>
-                                <li><span>450.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet2.php">
+                                    <img src="image/ct2.2.jpg" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a>
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>AR21055DT-ÁO SƠ MI NAM</li>
+                                    <li><span>450.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct2.2.jpg">
+                                    <input type="hidden" name="tensp" value="AR21055DT-ÁO SƠ MI NAM">
+                                    <input type="hidden" name="gia" value="450000">
+                                    <input type="hidden" name="id" value="2">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/áo10.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a> 
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>ÁO SƠ MI3 </li>
-                                <li><span>500.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet3.php">
+                                    <img src="image/ct3.1.webp" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a> 
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>AR90780D1_ÁO SƠ MI</li>
+                                    <li><span>500.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct3.1.webp">
+                                    <input type="hidden" name="tensp" value="AR90780D1_ÁO SƠ MI">
+                                    <input type="hidden" name="gia" value="500000">
+                                    <input type="hidden" name="soluong" value="1">
+                                    <input type="hidden" name="id" value="3">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/áo9.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a> 
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>ÁO SƠ MI LỬNG </li>
-                                <li><span>550.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet4.php">
+                                    <img src="image/ct4.1.webp" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a> 
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>AR90779D2-ÁO SƠ MI TRẮNG NAM </li>
+                                    <li><span>550.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct4.1.webp">
+                                        <input type="hidden" name="tensp" value="AR90779D2-ÁO SƠ MI TRẮNG NAM">
+                                        <input type="hidden" name="gia" value="550000">
+                                        <input type="hidden" name="id" value="4">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/quần1.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a> 
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>ÁO POLO </li>
-                                <li><span>450.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet5.php">
+                                    <img src="image/ct5.1.webp" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a> 
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>ÁO JACKET - JK231620</li>
+                                    <li><span>450.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct5.1.webp">
+                                        <input type="hidden" name="tensp" value="ÁO JACKET - JK231620">
+                                        <input type="hidden" name="gia" value="450000">
+                                        <input type="hidden" name="id" value="5">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/quần3.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a> 
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>QUẦN TÂY 1 </li>
-                                <li><span>500.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet6.php">
+                                    <img src="image/ct6.1.webp" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a> 
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>ALD90160-ÁO LEN OWEN</li>
+                                    <li><span>500.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct6.1.webp">
+                                        <input type="hidden" name="tensp" value="ALD90160-ÁO LEN OWEN">
+                                        <input type="hidden" name="gia" value="500000">
+                                        <input type="hidden" name="id" value="6">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/quần6.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a> 
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>QUẦN TÂY 2</li>
-                                <li><span>600.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet7.php">
+                                    <img src="image/ct7.1.webp" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a> 
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>ALD80470_AO LEN</li>
+                                    <li><span>600.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct7.1.webp">
+                                        <input type="hidden" name="tensp" value="ALD80470_AO LEN">
+                                        <input type="hidden" name="gia" value="600000">
+                                        <input type="hidden" name="id" value="7">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/pk1.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a>
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>QUẦN SHORT</li>
-                                <li><span>550.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet8.php">
+                                    <img src="image/ct8.1.png" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a>
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>ÁO LEN - ALD220762</li>
+                                    <li><span>550.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct8.1.png">
+                                        <input type="hidden" name="tensp" value="ÁO LEN - ALD220762">
+                                        <input type="hidden" name="gia" value="550000">
+                                        <input type="hidden" name="id" value="8">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/pk4.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a>
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>QUẦN TÂY 3</li>
-                                <li><span>300.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet9.php">
+                                    <img src="image/ct9.1.png" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a>
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>ÁO LEN - ALD231646</li>
+                                    <li><span>300.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct9.1.png">
+                                        <input type="hidden" name="tensp" value="ÁO LEN - ALD231646">
+                                        <input type="hidden" name="gia" value="300000">
+                                        <input type="hidden" name="id" value="9">
+                                </div>
+                            </form>
                         </div>
                         <div class="product-gallrey-1-container-product-1">
-                            <a href="chitiet.html">
-                                <img src="image/pk9.webp" alt="">
-                                <div class="name">Mua Ngay</div>
-                            </a> 
-                            <div class="product-gallrey-1-container-product-1-text">
-                                <li>QUẦN SHORT</li>
-                                <li><span>500.000</span><sup>đ</sup></li>
-                            </div>
+                            <form action="addtocart.php" method="post">
+                                <a href="chitiet10.php">
+                                    <img src="image/ct10.1.webp" alt="">
+                                    <div class="name">Mua Ngay</div>
+                                </a> 
+                                <div class="product-gallrey-1-container-product-1-text">
+                                    <li>ALD220769-ÁO LEN NAM</li>
+                                    <li><span>500.000</span><sup>đ</sup></li>
+                                    <input type="hidden" name="img" value="image/ct10.1.webp">
+                                        <input type="hidden" name="tensp" value="ALD220769-ÁO LEN NAM">
+                                        <input type="hidden" name="gia" value=">500000">
+                                        <input type="hidden" name="id" value="10">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

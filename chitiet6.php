@@ -27,6 +27,8 @@
                                     <li><a href="ao.html">Áo polo</a></li>
                                     <li><a href="ao.html">Áo jetket</a></li>
                                     <li><a href="ao.html">Áo len</a></li>
+                                    <li><a href="ao.html">Áo veston</a></li>
+                                    <li><a href="ao.html">Áo blazer</a></li>
                                 </ul>
                             </div> 
                         </li>
@@ -122,14 +124,14 @@
             </div>
                 <div class="slider-bar-now-colum2-item">
                     <div class="slider-bar-now-colum2-item-1">
-                        <img src="image/ao1.webp" alt="">
+                        <img src="image/ct6.1.webp" alt="">
                         <div class="slider-bar-now-colum2-item-1-text">
                         </div>
                         <div class="slider-bar-now-colum2-item-1-text2">
                             <ul>
-                                <li><img src="image/ao3.webp" alt=""></li>
-                                <li><img src="image/ao1.webp" alt=""></li>
-                                <li><img src="image/ao2.webp" alt=""></li>
+                                <li><img src="image/ct6.2.jpg" alt=""></li>
+                                <li><img src="image/ct6.3.jpg" alt=""></li>
+                                <li><img src="image/ct6.6.jpg" alt=""></li>
                             </ul>
 
                         </div>
@@ -137,15 +139,15 @@
                 </div>
                 <div class="slider-bar-now-colum3-item">
                     <form action="addtocart.php" method="post">
-                        <li><h1>Áo POLO-21111060</h1></li>
+                        <li><h1>ALD90160-ÁO LEN OWEN</h1></li>
                         <li><p>400.000đ</p></li>
                         <li><input type="number" value="1" min="1"></li>
                         <li><p>CHỌN SIZE:</p></li>
                         <li><a><button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button></a><br></li>
                         <a><i class="fas fa-ruler-horizontal">Hướng dẫn chọn size</i></a>
-                        <input type="hidden" name="img" value="image/ao1.webp">
+                        <input type="hidden" name="img" value="image/ct6.1.webp">
                         <input type="hidden" name="sl" value="sl">
-                        <input type="hidden" name="tensp" value="Áo POLO-21111060">
+                        <input type="hidden" name="tensp" value="ALD90160-ÁO LEN OWEN">
                         <input type="hidden" name="gia" value="400000">
                         <input type="hidden" name="id" value="11">
                         <li><input type="submit"name="giohang"value="Thêm vào giỏ hàng"></li>
@@ -170,6 +172,7 @@
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI</li>
                             <li><span>580.000</span><sup>đ</sup></li>
+                            <li><button style="width: 70%;"><i class="fas fa-cart-plus"></i>Thêm vào giỏ hàng</button></li>
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -180,6 +183,7 @@
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI NAM </li>
                             <li><span>400.000</span><sup>đ</sup></li>
+                            <li><button style="width: 70%;"><i class="fas fa-cart-plus"></i>Thêm vào giỏ hàng</button></li>
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -190,6 +194,7 @@
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI3 </li>
                             <li><span>350.000</span><sup>đ</sup></li>
+                            <li><button style="width: 70%;"><i class="fas fa-cart-plus"></i>Thêm vào giỏ hàng</button></li>
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -200,6 +205,7 @@
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI LỬNG </li>
                             <li><span>400.000</span><sup>đ</sup></li>
+                            <li><button style="width: 70%;"><i class="fas fa-cart-plus"></i>Thêm vào giỏ hàng</button></li>
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -210,6 +216,7 @@
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO POLO </li>
                             <li><span>399.000</span><sup>đ</sup></li>
+                            <li><button style="width: 70%;"><i class="fas fa-cart-plus"></i>Thêm vào giỏ hàng</button></li>
                         </div>
                     </div>
                 </div>

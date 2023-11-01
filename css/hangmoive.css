@@ -36,18 +36,18 @@ h2{
     color: #000;
     text-decoration: none;
     background-color: #CFD3CB;
-    line-height: 60px;
-    height: 60px;
+    line-height: 130px;
+    height: 135px;
 }
 /*-----------submenu1------------------*/
 .submenu1{
     color: #333;
     position: absolute;
     background-color: #FFFFFF;
-    width: 300px;
+    width: 170px;
     height: auto;
     display: none;
-  
+    left: 360px;
 }
 .submenu1 ul {
     display: flex;
@@ -58,15 +58,8 @@ h2{
     padding: 20px;
 
 }
-.submenu1 ul img{
-    text-align: right;
-    margin: 10px;
-    text-align: left;
-}
 .submenu1 ul li {
-   
     padding: 10px 0;
-   
 }
 .menu-ba-container ul li:hover .submenu1{
     display: block;
@@ -80,9 +73,10 @@ h2{
     color: #333;
     position: absolute;
     background-color: #FFFFFF;
-    width: 300px;
+    width: 170px;
     height: auto;
     display: none;
+    left: 460px;
   
 }
 .submenu2 ul {
@@ -93,11 +87,6 @@ h2{
     top: 100%;
     padding: 20px;
 
-}
-.submenu2 ul img{
-    text-align: right;
-    margin: 10px;
-    text-align: left;
 }
 .submenu2 ul li {
    
@@ -116,9 +105,10 @@ h2{
     color: #333;
     position: absolute;
     background-color: #FFFFFF;
-    width: 300px;
+    width: 170px;
     height: auto;
     display: none;
+    left: 600px;
 }
 .submenu3 ul {
     display: flex;
@@ -128,11 +118,6 @@ h2{
     top: 100%;
     padding: 20px;
 
-}
-.submenu3 ul img{
-    text-align: right;
-    margin: 10px;
-    text-align: left;
 }
 .submenu3 ul li {
     padding: 10px 0;
@@ -149,9 +134,10 @@ h2{
     color: #333;
     position: absolute;
     background-color: #FFFFFF;
-    width: 300px;
+    width: 170px;
     height: auto;
     display: none;
+    left: 750px;
 }
 .submenu4 ul {
     display: flex;
@@ -162,11 +148,6 @@ h2{
     padding: 20px;
 
 }
-.submenu4 ul img{
-    text-align: right;
-    margin: 10px;
-    text-align: left;
-}
 .submenu4 ul li {
     padding: 10px 0;
 }
@@ -176,15 +157,17 @@ h2{
 .submenu4 ul li:hover a {
     color: #CBB16A;
     background: none;
-}
+}/*------------submenu-----------------*/
+
 /*----------------submenu5--------------------*/
 .submenu5{
     color: #333;
     position: absolute;
     background-color: #FFFFFF;
-    width: 300px;
+    width: 170px;
     height: auto;
     display: none;
+    left: 1340px;
 }
 .submenu5 ul {
     display: flex;
@@ -193,9 +176,11 @@ h2{
     left: 0;
     top: 100%;
     padding: 20px;
+    
 }
 .submenu5 ul li {
     padding: 10px 0;
+    transition: all 0.5s ease-in-out;
 }
 .menu-ba-container ul li:hover .submenu5{
     display: block;
@@ -203,7 +188,8 @@ h2{
 .submenu5 ul li:hover a {
     color: #CBB16A;
     background: none;
-}
+}/*----------------------------------*/
+
 /*--------------------product-gallrey----------------------*/
 .product-gallrey-1-container-product{
     display: flex;
