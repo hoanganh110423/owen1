@@ -25,55 +25,55 @@
                     <div class="menu-ba-container">
                         <ul>
                             <li><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></li>
-                            <li><a href="/owen/html/hangmoive.html" style="color: #333;"> HÀNG MỚI VỀ</a></li>
-                            <li><a href="/owen/html/ao.html" style="color: #333;"> ÁO</a>
+                            <li><a href="/owen/php/hangmoive.php" style="color: #333;"> HÀNG MỚI VỀ</a></li>
+                            <li><a href="/owen/php/ao.php" style="color: #333;"> ÁO</a>
                                 <div class="submenu1">
                                     <ul>
-                                        <li><a href="/owen/html/ao.html">Áo sơ mi</a></li>
-                                        <li><a href="/owen/html/ao.html">Áo sơ mi trắng</a></li>
-                                        <li><a href="/owen/html/ao.html">Áo polo</a></li>
-                                        <li><a href="/owen/html/ao.html">Áo jetket</a></li>
-                                        <li><a href="/owen/html/ao.html">Áo len</a></li>
-                                        <li><a href="/owen/html/ao.html">Áo veston</a></li>
-                                        <li><a href="/owen/html/ao.html">Áo blazer</a></li>
+                                        <li><a href="/owen/php/ao.php">Áo sơ mi</a></li>
+                                        <li><a href="/owen/php/ao.php">Áo sơ mi trắng</a></li>
+                                        <li><a href="/owen/php/ao.php">Áo polo</a></li>
+                                        <li><a href="/owen/php/ao.php">Áo jetket</a></li>
+                                        <li><a href="/owen/php/ao.php">Áo len</a></li>
+                                        <li><a href="/owen/php/ao.php">Áo veston</a></li>
+                                        <li><a href="/owen/php/ao.php">Áo blazer</a></li>
                                     </ul>
                                 </div> 
                             </li>
-                            <li><a href="/owen/html/quan.html" style="color: #333;"> QUẦN</a>
+                            <li><a href="/owen/php/quan.php" style="color: #333;"> QUẦN</a>
                                 <div class="submenu2">
                                     <ul>
-                                        <li><a href="/owen/html/quan.html">Quần tây</a></li>
-                                        <li><a href="/owen/html/quan.html">Quần short</a></li>
-                                        <li><a href="/owen/html/quan.html">Quần khaki</a></li>
-                                        <li><a href="/owen/html/quan.html">Quần jeans</a></li>
-                                        <li><a href="/owen/html/quan.html">Quần jogger</a></li>
+                                        <li><a href="/owen/php/quan.php">Quần tây</a></li>
+                                        <li><a href="/owen/php/quan.php">Quần short</a></li>
+                                        <li><a href="/owen/php/quan.php">Quần khaki</a></li>
+                                        <li><a href="/owen/php/quan.php">Quần jeans</a></li>
+                                        <li><a href="/owen/php/quan.php">Quần jogger</a></li>
                                     </ul>
                                 </div> 
                             </li>
-                            <li><a href="/owen/html/phukien.html" style="color: #333;">PHỤ KIỆN</a>
+                            <li><a href="/owen/php/phukien.php" style="color: #333;">PHỤ KIỆN</a>
                                 <div class="submenu3">
                                     <ul>
-                                        <li><a href="/owen/html/phukien.html">Đồ lót</a></li>
-                                        <li><a href="/owen/html/phukien.html">Tất</a></li>
-                                        <li><a href="/owen/html/phukien.html">Dây lưng</a></li>
-                                        <li><a href="/owen/html/phukien.html">Ví</a></li>
-                                        <li><a href="/owen/html/phukien.html">Cà vạt</a></li>
+                                        <li><a href="/owen/php/phukien.php">Đồ lót</a></li>
+                                        <li><a href="/owen/php/phukien.php">Tất</a></li>
+                                        <li><a href="/owen/php/phukien.php">Dây lưng</a></li>
+                                        <li><a href="/owen/php/phukien.php">Ví</a></li>
+                                        <li><a href="/owen/php/phukien.php">Cà vạt</a></li>
                                     </ul>
                                 </div> 
                             </li>
-                            <li><a href="/owen/html/giatot.html" style="color: #333;"> GIÁ TỐT</a>
+                            <li><a href="/owen/php/giatot.php" style="color: #333;"> GIÁ TỐT</a>
                                 <div class="submenu4">
                                     <ul>
-                                        <li><a href="/owen/html/giatot.html">Áo sơ mi</a></li>
-                                        <li><a href="/owen/html/giatot.html">Polo giá tốt</a></li>
-                                        <li><a href="/owen/html/giatot.html">quần giá tốt</a></li>
-                                        <li><a href="/owen/html/giatot.html">Ưu đãi đặc biệt</a></li>
+                                        <li><a href="/owen/php/giatot.php">Áo sơ mi</a></li>
+                                        <li><a href="/owen/php/giatot.php">Polo giá tốt</a></li>
+                                        <li><a href="/owen/php/giatot.php">quần giá tốt</a></li>
+                                        <li><a href="/owen/php/giatot.php">Ưu đãi đặc biệt</a></li>
                                     </ul>
                                 </div> 
                             </li>
-                            <li><a href="/owen/html/trangchusn.html" style="color: #333;">CỬA HÀNG</a></li>
+                            <li><a href="/owen/php/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
                             <li><input type="search" placeholder="search...."><i class="fas fa-search"></i></li>
-                            <li><a href="dangnhap.html"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="dangnhap.php"><i class="fas fa-heart"></i></a></li>
                             <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a></li>
                             <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"></i></a></li>
                         </ul>
@@ -82,7 +82,7 @@
                 </div>
             </section>
         </nav>
-        <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="hangmoive.html" style="text-align: center;">Ở ĐÂY</a></h2>
+        <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="hangmoive.php" style="text-align: center;">Ở ĐÂY</a></h2>
         <!-------------thanh trượt slider-- không làm đc------------>
         <h3>Giỏ hàng</h3>
         <section class="showcart">
@@ -129,7 +129,7 @@
                      </table>
                     <table>
                         <tr>
-                            <th><p><a href="/owen/html/trangchusn.html" >Tiếp tục đặt hàng</a></p></th>
+                            <th><p><a href="/owen/php/trangchusn.php" >Tiếp tục đặt hàng</a></p></th>
                             <th><p><a href="delcart.php" >Xóa giỏ hàng</a></p></th>
                             <th><p><a href="" >Đặt hàng</a></th>
                         </tr>
@@ -143,7 +143,7 @@
                 <div class="fage-footer-container-now-colum1">
                     <div class="fage-footer-container-now-colum1-item">
                         <h4 class="footer-logo">
-                            <a title="Owen" href="/owen/html/trangchusn.html"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
+                            <a title="Owen" href="/owen/php/trangchusn.php"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
                         </h4>
                         <ul class="footer-link ">
                             <li>
@@ -166,11 +166,11 @@
                             GIỚI THIỆU OWEN
                         </h4>
                         <ul class="footer-links ">
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Giới thiệu</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">BLOG</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Hệ thống của hàng</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Liên hệ OWEN</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Chính sách bảo mật</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Giới thiệu</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">BLOG</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Hệ thống của hàng</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Liên hệ OWEN</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Chính sách bảo mật</a></li>
                         </ul>
                     </div>
                 </div>
@@ -180,12 +180,12 @@
                             HỖ TRỢ KHÁCH HÀNG
                         </h4>
                         <ul class="footer-links ">
-                            <li><a title="owen" href="/owen/html/gioithieu.html" style="color:#060709;">Hỏi đáp</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Chính sách vận chuyển</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Hướng dẫn chọn kích cỡ</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Hướng dẫn thanh toán</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Quy định đổi hàng</a></li>
-                            <li><a title="owen" href="/owen/html/gioithieu.html"style="color:#060709;">Hướng dẫn mua hàng</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php" style="color:#060709;">Hỏi đáp</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Chính sách vận chuyển</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Hướng dẫn chọn kích cỡ</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Hướng dẫn thanh toán</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Quy định đổi hàng</a></li>
+                            <li><a title="owen" href="/owen/php/gioithieu.php"style="color:#060709;">Hướng dẫn mua hàng</a></li>
                         </ul>
                     </div>
                 </div>
@@ -195,16 +195,16 @@
                         KẾT NỐI
                         </h4>
                         <ul class="footer-links ">
-                            <li><a href="/owen/html/dangnhap.html"style="color:#060709;"><i class="fas fa-facebook"></i></a></li>
-                            <li><a href="/owen/html/dangnhap.html"style="color:#060709;"><i class="fas fa-facebook-messenger"></i></a></li>
-                            <li><a href="/owen/html/dangnhap.html"><i class="fas fa-youtube"></i></a></li>
+                            <li><a href="/owen/php/dangnhap.php"style="color:#060709;"><i class="fas fa-facebook"></i></a></li>
+                            <li><a href="/owen/php/dangnhap.php"style="color:#060709;"><i class="fas fa-facebook-messenger"></i></a></li>
+                            <li><a href="/owen/php/dangnhap.php"><i class="fas fa-youtube"></i></a></li>
                         </ul>
                         <h4 class="footer-title-active">
                             PHƯƠNG THỨC THANH TOÁN
                         </h4>
                         <ul class="footer-links ">
-                            <li><a href="/owen/html/dangnhap.html"style="color:#060709;">Thanh toán khi nhận hàng</a></li>
-                            <li><a href="/owen/html/dangnhap.html"style="color:#060709;">Thanh toán on hiện đang cập nhật</a></li>
+                            <li><a href="/owen/php/dangnhap.php"style="color:#060709;">Thanh toán khi nhận hàng</a></li>
+                            <li><a href="/owen/php/dangnhap.php"style="color:#060709;">Thanh toán on hiện đang cập nhật</a></li>
                         </ul>
                     </div>
                 </div>
@@ -214,9 +214,9 @@
             <p>Hỗ trợ làm web liên hệ : Hoàng Anh</p>
         </div>
     </body>
-    </html>
+</html>
     <?php
     }else{
-        echo '<br>Giỏ hàng rỗng<br><a href ="/owen/html/trangchusn.html">Tiếp tục đặt hàng</a>';
+        echo '<br>Giỏ hàng rỗng<br><a href ="/owen/php/trangchusn.php">Tiếp tục đặt hàng</a>';
     }
     ?>

@@ -4,13 +4,13 @@
     if(isset($_SESSION['cart'])) {
         if(isset($_GET['id'])){
             array_splice($_SESSION['cart'],$_GET['id'],1 );
-            header('location: trangchusn.html');
+            header('location: /owen/php/trangchusn.php');
         }else{
             unset($_SESSION['cart']);
             header('location: viewcart.php');
             
         }
         if(count($_SESSION['cart'])>0) header('location: viewcart.php');
-        else header('location: /owen/html/trangchusn.html');
+        else header('location: /owen/php/trangchusn.php');
     } 
 ?>

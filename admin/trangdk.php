@@ -32,5 +32,4 @@
         </form>
        </div>
 </body>
-<script src="tranglogin.js"></script>
 </html>

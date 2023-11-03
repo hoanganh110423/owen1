@@ -6,11 +6,12 @@ if(isset($_POST["submit"])&& $_POST["username"] != '' && $_POST["password"] != '
     $sql = " SELECT * FROM username where username='$username' AND password='$password' ";
     $user = mysqli_query($conn, $sql);
     if(mysqli_num_rows($user) > 0   ){
-        header("location: /owen/html/trangchusn.html");
+        header("location: /owen/php/trangchusn.php");
     }    else{
         echo" Tên đăng nhập hoặc mật khẩu không đúng ";
     }
-}else {
+}
+else {
     header("location:tranglogin.php");
 }
 ?>

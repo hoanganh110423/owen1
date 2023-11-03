@@ -181,7 +181,39 @@ h2{
 }/*----------------------------------*/
 
 /*----------------submenu5--------------------*/
+.submenu5{
+    color: #333;
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 170px;
+    height: auto;
+    display: none;
+    left: 1285px;
+}
+.submenu5 ul {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    left: 0;
+    top: 100%;
+    padding: 20px;
 
+}
+.submenu5 ul li {
+    padding: 10px 0;
+}
+.submenu5 ul li a{
+    color: #000;
+}
+.menu-ba-container ul li:hover .submenu5{
+    display: block;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.submenu5 ul li:hover a {
+    color: #CBB16A;
+    background: none;
+}
 /*--------------------slider-bar-now-colum2----------------------*/
 .slider-bar-now-colum2-item-1{
     width: 50%;
