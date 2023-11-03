@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 header{
     text-align: center;
@@ -47,7 +48,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 360px;
+    left: 405px;
 }
 .submenu1 ul {
     display: flex;
@@ -61,8 +62,13 @@ h2{
 .submenu1 ul li {
     padding: 10px 0;
 }
+.submenu1 ul li a{
+    color: #000;
+}
 .menu-ba-container ul li:hover .submenu1{
     display: block;
+    background-color: aliceblue;
+    border-radius: 5px;
 }
 .submenu1 ul li:hover a {
     color: #CBB16A;
@@ -76,7 +82,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 460px;
+    left: 537px;
   
 }
 .submenu2 ul {
@@ -90,11 +96,15 @@ h2{
 }
 .submenu2 ul li {
    
-    padding: 10px 0;
-   
+    padding: 10px 0; 
+}
+.submenu2 ul li a{
+    color: #000;
 }
 .menu-ba-container ul li:hover .submenu2{
     display: block;
+    background-color: aliceblue;
+    border-radius: 5px;
 }
 .submenu2 ul li:hover a {
     color: #CBB16A;
@@ -108,7 +118,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 600px;
+    left: 685px;
 }
 .submenu3 ul {
     display: flex;
@@ -122,8 +132,13 @@ h2{
 .submenu3 ul li {
     padding: 10px 0;
 }
+.submenu3 ul li a{
+    color: #000;
+}
 .menu-ba-container ul li:hover .submenu3{
     display: block;
+    background-color: aliceblue;
+    border-radius: 5px;
 }
 .submenu3 ul li:hover a {
     color: #CBB16A;
@@ -137,7 +152,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 750px;
+    left: 855px;
 }
 .submenu4 ul {
     display: flex;
@@ -151,44 +166,20 @@ h2{
 .submenu4 ul li {
     padding: 10px 0;
 }
+.submenu4 ul li a{
+    color: #000;
+}
 .menu-ba-container ul li:hover .submenu4{
     display: block;
+    background-color: aliceblue;
+    border-radius: 5px;
 }
 .submenu4 ul li:hover a {
     color: #CBB16A;
     background: none;
 }
 
-/*----------------submenu5--------------------*/
-.submenu5{
-    color: #333;
-    position: absolute;
-    background-color: #FFFFFF;
-    width: 170px;
-    height: auto;
-    display: none;
-    left: 1340px;
-}
-.submenu5 ul {
-    display: flex;
-    flex-direction: column;
-    align-items:baseline;
-    left: 0;
-    top: 100%;
-    padding: 20px;
-    
-}
-.submenu5 ul li {
-    padding: 10px 0;
-    transition: all 0.5s ease-in-out;
-}
-.menu-ba-container ul li:hover .submenu5{
-    display: block;
-}
-.submenu5 ul li:hover a {
-    color: #CBB16A;
-    background: none;
-}/*----------------------------------*/
+/*----------------------------------*/
 
 /*---------------slider-------------------*/
 .slider{
@@ -213,7 +204,6 @@ h2{
     width: 97%;
     height: 80%;
     object-fit: cover;
-    border-radius: 40px;
 }
 .slider-container-left-under-1{
     margin-top: 340px;

@@ -11,6 +11,6 @@
             
         }
         if(count($_SESSION['cart'])>0) header('location: viewcart.php');
-        else header('location: trangchusn.html');
+        else header('location: /owen/html/trangchusn.html');
     } 
 ?>
