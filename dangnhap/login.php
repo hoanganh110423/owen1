@@ -9,7 +9,7 @@ session_start();
         <link rel="stylesheet" href="/owen/css/tranglogin.css" />
     </head>
 <body>
-    <?php
+<?php
         require('db.php');
         // If form submitted, insert values into the database.
         if (isset($_POST['username'])){

@@ -177,7 +177,7 @@ include("../dangnhap/auth.php");
                         </a>
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI</li>
-                            <li><span>580.000</span><sup>đ</sup></li>
+                            <!--<li><span>580.000</span><sup>đ</sup></li>-->
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -187,7 +187,7 @@ include("../dangnhap/auth.php");
                         </a> 
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI NAM </li>
-                            <li><span>400.000</span><sup>đ</sup></li>
+                            <!--<li><span>400.000</span><sup>đ</sup></li>-->
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -197,7 +197,7 @@ include("../dangnhap/auth.php");
                         </a> 
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI3 </li>
-                            <li><span>350.000</span><sup>đ</sup></li>
+                            <!--<li><span>350.000</span><sup>đ</sup></li>-->
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -207,7 +207,7 @@ include("../dangnhap/auth.php");
                         </a>
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO SƠ MI LỬNG </li>
-                            <li><span>400.000</span><sup>đ</sup></li>
+                            <!--<li><span>400.000</span><sup>đ</sup></li>-->
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
@@ -217,7 +217,7 @@ include("../dangnhap/auth.php");
                         </a> 
                         <div class="product-gallrey-1-container-product-1-text">
                             <li>ÁO POLO </li>
-                            <li><span>399.000</span><sup>đ</sup></li>
+                            <!--<li><span>399.000</span><sup>đ</sup></li>-->
                         </div>
                     </div>
                 </div>

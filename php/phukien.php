@@ -132,7 +132,7 @@ include("../dangnhap/auth.php");
                                     </a>
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>ÁO SƠ MI</li>
-                                        <li><span>150.000</span><sup>đ</sup></li>
+                                        <!--<li><span>150.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -142,7 +142,7 @@ include("../dangnhap/auth.php");
                                     </a> 
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>ÁO SƠ MI NAM </li>
-                                        <li><span>100.000</span><sup>đ</sup></li>
+                                        <!--<li><span>100.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -152,7 +152,7 @@ include("../dangnhap/auth.php");
                                     </a>
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>ÁO SƠ MI3 </li>
-                                        <li><span>100.000</span><sup>đ</sup></li>
+                                        <!--<li><span>100.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -162,7 +162,7 @@ include("../dangnhap/auth.php");
                                     </a> 
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>ÁO SƠ MI LỬNG </li>
-                                        <li><span>150.000</span><sup>đ</sup></li>
+                                        <!--<li><span>150.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -172,7 +172,7 @@ include("../dangnhap/auth.php");
                                     </a> 
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>ÁO POLO </li>
-                                        <li><span>120.000</span><sup>đ</sup></li>
+                                        <!--<li><span>120.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -182,7 +182,7 @@ include("../dangnhap/auth.php");
                                     </a> 
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>QUẦN TÂY 1 </li>
-                                        <li><span>130.000</span><sup>đ</sup></li>
+                                        <!--<li><span>130.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -192,7 +192,7 @@ include("../dangnhap/auth.php");
                                     </a> 
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>QUẦN TÂY 2</li>
-                                        <li><span>90.000</span><sup>đ</sup></li>
+                                        <!--<li><span>90.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -202,7 +202,7 @@ include("../dangnhap/auth.php");
                                     </a> 
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>QUẦN SHORT</li>
-                                        <li><span>120.000</span><sup>đ</sup></li>
+                                        <!--<li><span>120.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                                 <div class="product-gallrey-1-container-product-1">
@@ -212,7 +212,7 @@ include("../dangnhap/auth.php");
                                     </a>
                                     <div class="product-gallrey-1-container-product-1-text">
                                         <li>QUẦN TÂY 3</li>
-                                        <li><span>130.000</span><sup>đ</sup></li>
+                                        <!--<li><span>130.000</span><sup>đ</sup></li>-->
                                     </div>
                                 </div>
                             </div>

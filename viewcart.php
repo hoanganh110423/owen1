@@ -18,7 +18,10 @@ include("./dangnhap/auth.php");
         <title>Giỏ hàng</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='/owen/css/trangchu.css'>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         <header id="header">
@@ -93,56 +96,58 @@ include("./dangnhap/auth.php");
                 </div>
             </section>
         </nav>
-        <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="hangmoive.php" style="text-align: center;">Ở ĐÂY</a></h2>
         <!-------------thanh trượt slider-- không làm đc------------>
-        <h3>Giỏ hàng</h3>
-        <section class="showcart">
-            <div class="container">
-                <div class="product-gallrey-1-container">
-            </div>
             <!--------------------slider bar--------------------->
             <div class="showcart">
                 <div class="showcart-bar">
-                     <table>
+                    <div class="container">
+                        <h2>Giỏ Hàng</h2>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Tên Sản Phẩm</th>
+                                    <th>Size</th>
+                                    <th>Số lượng</th>
+                                    <th>Giá</th>
+                                    <th>Thành tiền</th>
+                                    <th>Xóa</th>
+                                </tr>
+                                </thead>
+                            <tbody>
+                                    <tr>
+                                <?php
+                                    $tong=0;
+                                    $i=0;
+                                foreach ($_SESSION['cart'] as $sp) {
+                                    $ttien=$sp[4]*$sp[5];
+                                    $tong+=$ttien;
+                                        echo '<tr>
+                                            <td><img src="'.$sp[1].'" width="30px"></td>
+                                            <td>'.$sp[2].'</td>
+                                            <td>'.$sp[3].'</td>
+                                            <td>'.$sp[4].'</td>  
+                                            <td>'.$sp[5].'</td>
+                                            <td>'.$ttien.'</td>
+                                            <td><a href="delcart.php?id='.$i.'">XÓA</a></td>
+                                            </tr>';
+                                        $i++;
+                                    }
+                                ?>
+                                </tr>
+                            <tr>
+                                <td colspan="5" style="border-right:2px solid #CFD3CB;">Tổng tiền</td>
+                                <td style="border-right:2px solid #CFD3CB;"><?=$tong ?></td>
+                                <td ><a href="delcart.php" >XÓA</a></td>
+                                
+                            </tr>
+                            </tbody>
+                        </table>
+                    <table >
                         <tr>
-                            <th>Sản phẩm</th>
-                            <th>Màu</th>
-                            <th>Size</th>
-                            <th>Số lượng</th>
-                            <th>Giá</th>
-                            <th>Thành tiền</th>
-                            <th>Xóa</th>
-                        </tr>
-                        <?php
-                            $tong=0;
-                            $i=0;
-                           foreach ($_SESSION['cart'] as $sp) {
-                            $ttien=$sp[4]*$sp[5];
-                            $tong+=$ttien;
-                                echo '<tr>
-                                    <td><img src="'.$sp[1].'" width="30px"></td>
-                                    <td>'.$sp[2].'</td>
-                                    <td>'.$sp[3].'</td>
-                                    <td>'.$sp[4].'</td>  
-                                    <td>'.$sp[5].'</td>
-                                    <td>'.$ttien.'</td>
-                                    <td><a href="delcart.php?id='.$i.'">XÓA</a></td>
-                                    </tr>';
-                                $i++;
-                            }
-                        ?>
-                       <tr>
-                        <td colspan="4" style="border-right:2px solid #CFD3CB;">Tổng tiền</td>
-                        <td style="border-right:2px solid #CFD3CB;"><?=$tong ?></td>
-                        <!--<td style="border: 2px solid #CFD3CB;"></td>-->
-                        <td ></td>
-                   </tr>
-                     </table>
-                    <table>
-                        <tr>
-                            <th><p><a href="/owen/dangnhap/home.php" >Tiếp tục đặt hàng</a></p></th>
-                            <th><p><a href="delcart.php" >Xóa giỏ hàng</a></p></th>
-                            <th><p><a href="" >Đặt hàng</a></th>
+                            <th><button><a href="/owen/dangnhap/home.php" >Tiếp tục đặt hàng</a></button></th>
+                            <th><button><a href="delcart.php" >Xóa giỏ hàng</a></button></th>
+                            <th><button><a href="#" >Đặt hàng</a></button></th>
                         </tr>
                     </table>
                 </div>
