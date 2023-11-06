@@ -1,3 +1,7 @@
+<?php
+//include auth.php file on all secure pages
+include("../dangnhap/auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,11 +67,11 @@
                             </div> 
                         </li>
                         <li><a href="/owen/php/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
-                        <li><a href="/owen/php/dangnhap.php"><i class="fas fa-heart"></i></a></li>
+                        <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-heart"></i></a></li>
                         <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a>
                         <div class="submenu5">
                                 <ul>
-                                    <li><a href="/owen/admin/tranglogin.php">Đăng nhập</a></li>
+                                    <li><?php echo $_SESSION['username']; ?></li>
                                     <li><a href="/owen/php/giatot.php">Đăng xuất</a></li>
                                 </ul>
                             </div>
@@ -78,7 +82,7 @@
             </div>
         </section>
     </nav>
-    <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="/owen/php/hangmoive.php" style="text-align: center;">Ở ĐÂY</a></h2>
+    <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="/owen/hangmoive.php" style="text-align: center;">Ở ĐÂY</a></h2>
     <section class="product-gallrey-1">
         <div class="container">
             <div class="product-gallrey-1-container">
@@ -117,45 +121,45 @@
                             </ul>
                     </div>
                     </div>
-<div class="slider-bar-now-colum2-item">
-    <div class="slider-bar-now-colum2-item-1">
-        <img src="/owen/image/ct9.1.png" alt="">
-        <div class="slider-bar-now-colum2-item-1-text">
-        </div>
-        <div class="slider-bar-now-colum2-item-1-text2">
-            <ul>
-                <li><img src="/owen/image/ct9.2.png" alt=""></li>
-                <li><img src="/owen/image/ct9.3.png" alt=""></li>
-                <li><img src="/owen/image/ct9.4.png" alt=""></li>
-            </ul>
+                <div class="slider-bar-now-colum2-item">
+                    <div class="slider-bar-now-colum2-item-1">
+                        <img src="/owen/image/ct9.1.webp" alt="">
+                        <div class="slider-bar-now-colum2-item-1-text">
+                        </div>
+                        <div class="slider-bar-now-colum2-item-1-text2">
+                            <ul>
+                                <li><img src="/owen/image/ct9.2.jpg" alt=""></li>
+                                <li><img src="/owen/image/ct9.3.jpg" alt=""></li>
+                                <li><img src="/owen/image/ct9.4.jpg" alt=""></li>
+                            </ul>
 
-        </div>
-    </div>
-</div>
-<div class="slider-bar-now-colum3-item">
-    <form action="/owen/addtocart.php" method="post">
-        <li><h1>ÁO LEN - ALD231646<h1></li>
-        <li><p>400.000đ</p></li>
-        <li><input type="number" value="1" min="1"></li>
-        <li><p>CHỌN SIZE:</p></li>
-        <li><select name="size">
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-            <option value="xl">XL</option>
-            </select>
-        </li>
-        <a><i class="fas fa-ruler-horizontal">Hướng dẫn chọn size</i></a>
-        <input type="hidden" name="img" value="/owen/image/ct9.1.png">
-        <input type="hidden" name="sl" value="sl">
-        <input type="hidden" name="" value="size">
-        <input type="hidden" name="tensp" value="ÁO LEN - ALD231646">
-        <input type="hidden" name="gia" value="400000">
-        <input type="hidden" name="id" value="11">
-        <li><input type="submit"name="giohang"value="Thêm vào giỏ hàng"></li>
-    </form>
-</div>
-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-bar-now-colum3-item">
+                    <form action="/owen/addtocart.php" method="post">
+                        <li><h1>ÁO LEN - ALD231646<h1></li>
+                        <li><p>400.000đ</p></li>
+                        <!--<li><input type="number" value="1" min="1"></li>-->
+                        <li><p>CHỌN SIZE:</p></li>
+                        <li><select name="size">
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                            </select>
+                        </li>
+                        <a><i class="fas fa-ruler-horizontal">Hướng dẫn chọn size</i></a>
+                        <input type="hidden" name="img" value="/owen/image/ct9.1.webp">
+                        <input type="hidden" name="sl" value="sl">
+                        <input type="hidden" name="" value="size">
+                        <input type="hidden" name="tensp" value="ÁO LEN - ALD231646">
+                        <input type="hidden" name="gia" value="400000">
+                        <input type="hidden" name="id" value="11">
+                        <li><input type="submit"name="giohang"value="Thêm vào giỏ hàng"></li>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
     <!-------------------------------->
@@ -187,7 +191,7 @@
                         </div>
                     </div>
                     <div class="product-gallrey-1-container-product-1">
-                        <a href="/owen/php/chitiet.php">
+                        <a href="/owen/chitiet.php">
                             <img src="/owen/image/áo8.webp" alt="">
                             <div class="name">Mua Ngay</div>
                         </a> 
@@ -260,21 +264,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="fage-footer-container-now-colum3">
-                <div class="fage-footer-container-now-colum3-item">
-                    <h4 class="footer-title-active">
-                        HỖ TRỢ KHÁCH HÀNG
-                    </h4>
-                    <ul class="footer-links ">
-                        <li><a title="owen" href="/owen/gioithieu.php" style="color:#060709;">Hỏi đáp</a></li>
-                        <li><a title="owen" href="/owen/gioithieu.php"style="color:#060709;">Chính sách vận chuyển</a></li>
-                        <li><a title="owen" href="/owen/gioithieu.php"style="color:#060709;">Hướng dẫn chọn kích cỡ</a></li>
-                        <li><a title="owen" href="/owen/gioithieu.php"style="color:#060709;">Hướng dẫn thanh toán</a></li>
-                        <li><a title="owen" href="/owen/gioithieu.php"style="color:#060709;">Quy định đổi hàng</a></li>
-                        <li><a title="owen" href="/owen/gioithieu.php"style="color:#060709;">Hướng dẫn mua hàng</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="fage-footer-container-now-colum4">
                     <div class="fage-footer-container-now-colum4-item">
                         <h4 class="footer-title-active" style="font-size: 12px;
@@ -292,6 +281,24 @@
                         <p>Nguyễn Mạnh Cường</p>
                         <p>Trần Tuấn Anh</p>
                     </div>
+                </div>
+            <div class="fage-footer-container-now-colum4">
+                <div class="fage-footer-container-now-colum4-item">
+                    <h4 class="footer-title-active">
+                    KẾT NỐI
+                    </h4>
+                    <ul class="footer-links ">
+                        <li><a href="/owen/dangnhap.php"style="color:#060709;"><i class="fas fa-facebook"></i></a></li>
+                        <li><a href="/owen/dangnhap.php"style="color:#060709;"><i class="fas fa-facebook-messenger"></i></a></li>
+                        <li><a href="/owen/dangnhap.php"><i class="fas fa-youtube"></i></a></li>
+                    </ul>
+                    <h4 class="footer-title-active">
+                        PHƯƠNG THỨC THANH TOÁN
+                    </h4>
+                    <ul class="footer-links ">
+                        <li><a href="/owen/dangnhap.php"style="color:#060709;">Thanh toán khi nhận hàng</a></li>
+                        <li><a href="/owen/dangnhap.php"style="color:#060709;">Thanh toán on hiện đang cập nhật</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

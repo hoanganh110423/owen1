@@ -1,3 +1,7 @@
+<?php
+//include auth.php file on all secure pages
+include("../dangnhap/auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +71,7 @@
                         <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a>
                         <div class="submenu5">
                                 <ul>
-                                    <li><a href="/owen/admin/tranglogin.php">Đăng nhập</a></li>
+                                    <li><?php echo $_SESSION['username']; ?></li>
                                     <li><a href="/owen/php/giatot.php">Đăng xuất</a></li>
                                 </ul>
                             </div>
@@ -136,7 +140,7 @@
     <form action="/owen/addtocart.php" method="post">
         <li><h1>ALD220769-ÁO LEN NAM</h1></li>
         <li><p>400.000đ</p></li>
-        <li><input type="number" value="1" min="1"></li>
+        <!--<li><input type="number" value="1" min="1"></li>-->
         <li><p>CHỌN SIZE:</p></li>
         <li><select name="size">
             <option value="s">S</option>

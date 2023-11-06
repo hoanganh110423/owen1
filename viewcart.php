@@ -1,10 +1,15 @@
 <?php
-    session_start();
+//include auth.php file on all secure pages
+include("./dangnhap/auth.php");
+?>
+<?php
+    //session_start();
     if(isset($_SESSION['cart'])){
         //echo var_dump($_SESSION['cart']);
 
     
 ?>
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -71,10 +76,16 @@
                                     </ul>
                                 </div> 
                             </li>
-                            <li><a href="/owen/php/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
-                            <li><input type="search" placeholder="search...."><i class="fas fa-search"></i></li>
+                            <li><a href="/owen/dangnhap/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
                             <li><a href="dangnhap.php"><i class="fas fa-heart"></i></a></li>
-                            <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a></li>
+                            <li><i class="fas fa-user"></i>
+                                <div class="submenu5">
+                                    <ul>
+                                        <li><?php echo $_SESSION['username']; ?></li>
+                                        <li><a href="/owen/dangnhap/logout.php">Đăng xuất</a></li>
+                                    </ul>
+                                </div>    
+                            </li>
                             <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"></i></a></li>
                         </ul>
 
@@ -129,7 +140,7 @@
                      </table>
                     <table>
                         <tr>
-                            <th><p><a href="/owen/php/trangchusn.php" >Tiếp tục đặt hàng</a></p></th>
+                            <th><p><a href="/owen/dangnhap/home.php" >Tiếp tục đặt hàng</a></p></th>
                             <th><p><a href="delcart.php" >Xóa giỏ hàng</a></p></th>
                             <th><p><a href="" >Đặt hàng</a></th>
                         </tr>
@@ -143,7 +154,7 @@
                 <div class="fage-footer-container-now-colum1">
                     <div class="fage-footer-container-now-colum1-item">
                         <h4 class="footer-logo">
-                            <a title="Owen" href="/owen/php/trangchusn.php"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
+                            <a title="Owen" href="/owen/dangnhap/trangchusn.php"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
                         </h4>
                         <ul class="footer-link ">
                             <li>
@@ -217,6 +228,6 @@
 </html>
     <?php
     }else{
-        echo '<br>Giỏ hàng rỗng<br><a href ="/owen/php/trangchusn.php">Tiếp tục đặt hàng</a>';
+        echo '<br>Giỏ hàng rỗng<br><a href ="/owen/dangnhap/trangchusn.php">Tiếp tục đặt hàng</a>';
     }
     ?>

@@ -13,7 +13,7 @@
         //timf sp
             if(isset($_SESSION['cart'])&&(count($_SESSION['cart'])>0)){
                 foreach ($_SESSION['cart'] as $sp){
-                    if($sp[0]==$id){
+                    if($sp[0] == $id){
                         //cập nhật sl
                         $sl+=$sp[4];
                         $fg=1;

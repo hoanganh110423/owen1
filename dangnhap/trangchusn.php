@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset='utf-8'>
@@ -62,13 +63,13 @@
                                     </ul>
                                 </div> 
                             </li>
-                            <li><a href="/owen/php/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
+                            <li><a href="/owen/dangnhap/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
                             <li><a href=""><i class="fas fa-heart"></i></a></li>
                             <li><i class="fas fa-user"></i>
                                 <div class="submenu5">
-                                    <ul><?=$logined ?>
-                                        <li><a href="/owen/admin/tranglogin.php">Đăng nhập</a></li>
-                                        <li><a href="#">Đăng xuất</a></li>
+                                    <ul>
+                                        <li><a href="/owen/dangnhap/login.php">Đăng nhập</a></li>
+                                        <li><a href="/owen/dangnhap/logout.php">Đăng xuất</a></li>
                                     </ul>
                                 </div>    
                             </li>
@@ -236,13 +237,13 @@
                         <div class="product-gallrey-1-container-product-1">
                             <form action="/owen/addtocart.php" method="post">
                                 <a href="/owen/chitiet/chitiet9.php">
-                                    <img src="/owen/image/ct9.png" alt="">
+                                    <img src="/owen/image/ct9.1.webp" alt="">
                                     <div class="name">Mua Ngay</div>
                                 </a>
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ÁO LEN - ALD231646</li>
                                     <li><span>300.000</span><sup>đ</sup></li>
-                                    <input type="hidden" name="img" value="/owen/image/ct9.png">
+                                    <input type="hidden" name="img" value="/owen/image/ct9.1.webp">
                                         <input type="hidden" name="tensp" value="ÁO LEN - ALD231646">
                                         <input type="hidden" name="gia" value="300000">
                                         <input type="hidden" name="id" value="9">
@@ -278,7 +279,7 @@
                 <div class="fage-footer-container-now-colum1">
                     <div class="fage-footer-container-now-colum1-item">
                         <h4 class="footer-logo">
-                            <a title="Owen" href="/owen/php/trangchusn.php"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
+                            <a title="Owen" href="/owen/dangnhap/trangchusn.php"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
                         </h4>
                         <ul class="footer-link ">
                             <li>

@@ -1,3 +1,7 @@
+<?php
+//include auth.php file on all secure pages
+include("../dangnhap/auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,13 +66,13 @@
                                 </ul>
                             </div> 
                         </li>
-                        <li><a href="/owen/php/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
+                        <li><a href="/owen/dangnhap/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
                         <li><a href=""><i class="fas fa-heart"></i></a></li>
                         <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a>
                             <div class="submenu5">
                                 <ul>
-                                    <li><a href="/owen/admin/tranglogin.php">Đăng nhập</a></li>
-                                    <li><a href="/owen/php/giatot.php">Đăng xuất</a></li>
+                                    <li><?php echo $_SESSION['username']; ?></li>
+                                    <li><a href="/owen/dangnhap/logout.php">Đăng xuất</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -106,7 +110,7 @@
                                 <li><a href="/owen/php/quan.php">Quần Tây</a></li>
                                 <li><a href="/owen/php/quan.php">Quần Khaki</a></li>
                                 <li><a href="/owen/php/quan.php">Quần Jeansjeans</a></li>
-                                <li><a href=/owen/php/quan.php">Quần Jogger</a></li>
+                                <li><a href="/owen/php/quan.php">Quần Jogger</a></li>
                             </ul>
                         <h1><a href="/owen/php/phukien.php">Phụ Kiện</a></h1>
                             <ul>
@@ -136,7 +140,7 @@
                     <form action="/owen/addtocart.php" method="post">
                         <li><h1>Áo POLO-21111060</h1></li>
                         <li><p>400.000đ</p></li>
-                        <li><input type="number" value="1" min="1"></li>
+                        <!--<li><input type="number" value="1" min="1"></li>-->
                         <li><p>CHỌN SIZE:</p></li>
                         <li><select name="size">
                             <option value="s">S</option>
@@ -229,7 +233,7 @@
             <div class="fage-footer-container-now-colum1">
                 <div class="fage-footer-container-now-colum1-item">
                     <h4 class="footer-logo">
-                        <a title="Owen" href="/owen/php/trangchusn.php"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
+                        <a title="Owen" href="/owen/dangnhap/trangchusn.php"><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></a>
                     </h4>
                     <ul class="footer-link ">
                         <li>
