@@ -116,7 +116,7 @@ include("auth.php");
                                 </a>
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ÁO SƠ MI - AR230640DT</li>
-                                    <li><span>580.000</span><sup>đ</sup></li>
+                                    <!--<li><span>580.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct1.1.webp">
                                     <input type="hidden" name="tensp" value="ÁO SƠ MI - AR230640DT">
                                     <input type="hidden" name="gia" value="580000">
@@ -132,7 +132,7 @@ include("auth.php");
                                 </a>
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>AR21055DT-ÁO SƠ MI NAM</li>
-                                    <li><span>450.000</span><sup>đ</sup></li>
+                                    <!--<li><span>450.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct2.2.jpg">
                                     <input type="hidden" name="tensp" value="AR21055DT-ÁO SƠ MI NAM">
                                     <input type="hidden" name="gia" value="450000">
@@ -148,7 +148,7 @@ include("auth.php");
                                 </a> 
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>AR90780D1_ÁO SƠ MI</li>
-                                    <li><span>500.000</span><sup>đ</sup></li>
+                                    <!--<li><span>500.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct3.1.webp">
                                     <input type="hidden" name="tensp" value="AR90780D1_ÁO SƠ MI">
                                     <input type="hidden" name="gia" value="500000">
@@ -165,7 +165,7 @@ include("auth.php");
                                 </a> 
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>AR90779D2-ÁO SƠ MI TRẮNG NAM </li>
-                                    <li><span>550.000</span><sup>đ</sup></li>
+                                    <!--<li><span>550.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct4.1.webp">
                                         <input type="hidden" name="tensp" value="AR90779D2-ÁO SƠ MI TRẮNG NAM">
                                         <input type="hidden" name="gia" value="550000">
@@ -181,7 +181,7 @@ include("auth.php");
                                 </a> 
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ÁO JACKET - JK231620</li>
-                                    <li><span>450.000</span><sup>đ</sup></li>
+                                    <!--<li><span>450.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct5.1.webp">
                                         <input type="hidden" name="tensp" value="ÁO JACKET - JK231620">
                                         <input type="hidden" name="gia" value="450000">
@@ -197,7 +197,7 @@ include("auth.php");
                                 </a> 
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ALD90160-ÁO LEN OWEN</li>
-                                    <li><span>500.000</span><sup>đ</sup></li>
+                                    <!--<li><span>500.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct6.1.webp">
                                         <input type="hidden" name="tensp" value="ALD90160-ÁO LEN OWEN">
                                         <input type="hidden" name="gia" value="500000">
@@ -213,7 +213,7 @@ include("auth.php");
                                 </a> 
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ALD80470_AO LEN</li>
-                                    <li><span>600.000</span><sup>đ</sup></li>
+                                    <!--<li><span>600.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct7.1.webp">
                                         <input type="hidden" name="tensp" value="ALD80470_AO LEN">
                                         <input type="hidden" name="gia" value="600000">
@@ -229,7 +229,7 @@ include("auth.php");
                                 </a>
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ÁO LEN - ALD220762</li>
-                                    <li><span>550.000</span><sup>đ</sup></li>
+                                    <!--<li><span>550.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct8.1.png">
                                         <input type="hidden" name="tensp" value="ÁO LEN - ALD220762">
                                         <input type="hidden" name="gia" value="550000">
@@ -245,7 +245,7 @@ include("auth.php");
                                 </a>
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ÁO LEN - ALD231646</li>
-                                    <li><span>300.000</span><sup>đ</sup></li>
+                                    <!--<li><span>300.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct9.1.webp">
                                         <input type="hidden" name="tensp" value="ÁO LEN - ALD231646">
                                         <input type="hidden" name="gia" value="300000">
@@ -261,7 +261,7 @@ include("auth.php");
                                 </a> 
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>ALD220769-ÁO LEN NAM</li>
-                                    <li><span>500.000</span><sup>đ</sup></li>
+                                    <!--<li><span>500.000</span><sup>đ</sup></li>-->
                                     <input type="hidden" name="img" value="/owen/image/ct10.1.webp">
                                         <input type="hidden" name="tensp" value="ALD220769-ÁO LEN NAM">
                                         <input type="hidden" name="gia" value=">500000">

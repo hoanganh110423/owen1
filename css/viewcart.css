@@ -48,7 +48,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 405px;
+    left: 520px;
 }
 .submenu1 ul {
     display: flex;
@@ -82,7 +82,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 537px;
+    left: 613px;
   
 }
 .submenu2 ul {
@@ -118,7 +118,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 685px;
+    left: 730px;
 }
 .submenu3 ul {
     display: flex;
@@ -187,7 +187,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 1285px;
+    left: 1190px;
 }
 .submenu5 ul {
     display: flex;
@@ -432,9 +432,24 @@ h3{
     border-collapse: collapse;
     border-bottom: 2px solid #CFD3CB;
 }.showcart-bar button{
-    width: 150px;
+    width: 200px;
     height: 50px;
     background-color: #773a596e;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2vw;
 }.showcart-bar button a{
     color: #000;
+    text-align: center;
+    
+}.dongy {
+    border: 1px #773a596e solid;
+    background-image: #773a596e;
+    padding: 10px;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: bold;
+}.showcart-bar button:hover{
+    background-color: #5A75C2;
 }

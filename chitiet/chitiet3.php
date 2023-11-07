@@ -155,7 +155,7 @@ include("../dangnhap/auth.php");
                             <input type="hidden" name="" value="size">
                             <input type="hidden" name="tensp" value="AR90780D1_ÁO SƠ MI">
                             <input type="hidden" name="gia" value="575000">
-                            <input type="hidden" name="id" value="11">
+                            <input type="hidden" name="id" value="13">
                             <li><input type="submit"name="giohang"value="Thêm vào giỏ hàng"></li>
                         </form>
                     </div>

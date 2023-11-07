@@ -1,4 +1,7 @@
-
+<?php
+//include auth.php file on all secure pages
+include("auth.php");
+?>
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -68,7 +71,7 @@
                             <li><i class="fas fa-user"></i>
                                 <div class="submenu5">
                                     <ul>
-                                        <li><a href="/owen/dangnhap/login.php">Đăng nhập</a></li>
+                                        <li><?php echo $_SESSION['username']; ?></li>
                                         <li><a href="/owen/dangnhap/logout.php">Đăng xuất</a></li>
                                     </ul>
                                 </div>    

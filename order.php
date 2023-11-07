@@ -9,13 +9,30 @@ include("./dangnhap/auth.php");
 
     
 ?>
+<?php
+    include "thuvien.php";
+    if(isset($_POST['dathang']) && $_POST['dathang']) {
+        
+        $name=$_POST['name'];
+        $address=$_POST['address'];
+        $tel=$_POST['tel'];
+        $email=$_POST['email'];
+        $pttt=0;
+        $total=tongdonhang();
 
+        taodonhang($name, $address,$tel,$email,$total,$pttt);
+
+    }
+        echo"bạn đã đặt hàng thành công";
+    
+
+?>
 <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Giỏ hàng</title>
+        <title>Thanh Toán</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='/owen/css/viewcart.css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -35,20 +52,18 @@ include("./dangnhap/auth.php");
                             <li><img src="/owen/image/logoowen.webp" alt="logo" style="width: 150px;height: 50px;"></li>
                             <li><a href="/owen/php/hangmoive.php" style="color: #333;"> HÀNG MỚI VỀ</a></li>
                             <li><a href="/owen/php/ao.php" style="color: #333;"> ÁO</a>
-                                <div class="submenu1">
+                                <!--<div class="submenu1">
                                     <ul>
                                         <li><a href="/owen/php/ao.php">Áo sơ mi</a></li>
                                         <li><a href="/owen/php/ao.php">Áo sơ mi trắng</a></li>
                                         <li><a href="/owen/php/ao.php">Áo polo</a></li>
                                         <li><a href="/owen/php/ao.php">Áo jetket</a></li>
                                         <li><a href="/owen/php/ao.php">Áo len</a></li>
-                                        <li><a href="/owen/php/ao.php">Áo veston</a></li>
-                                        <li><a href="/owen/php/ao.php">Áo blazer</a></li>
                                     </ul>
-                                </div> 
+                                </div>-->
                             </li>
                             <li><a href="/owen/php/quan.php" style="color: #333;"> QUẦN</a>
-                                <div class="submenu2">
+                                <!--<div class="submenu2">
                                     <ul>
                                         <li><a href="/owen/php/quan.php">Quần tây</a></li>
                                         <li><a href="/owen/php/quan.php">Quần short</a></li>
@@ -56,10 +71,10 @@ include("./dangnhap/auth.php");
                                         <li><a href="/owen/php/quan.php">Quần jeans</a></li>
                                         <li><a href="/owen/php/quan.php">Quần jogger</a></li>
                                     </ul>
-                                </div> 
+                                </div> -->
                             </li>
                             <li><a href="/owen/php/phukien.php" style="color: #333;">PHỤ KIỆN</a>
-                                <div class="submenu3">
+                                <!--<div class="submenu3">
                                     <ul>
                                         <li><a href="/owen/php/phukien.php">Đồ lót</a></li>
                                         <li><a href="/owen/php/phukien.php">Tất</a></li>
@@ -67,27 +82,27 @@ include("./dangnhap/auth.php");
                                         <li><a href="/owen/php/phukien.php">Ví</a></li>
                                         <li><a href="/owen/php/phukien.php">Cà vạt</a></li>
                                     </ul>
-                                </div> 
+                                </div> -->
                             </li>
                             <li><a href="/owen/php/giatot.php" style="color: #333;"> GIÁ TỐT</a>
-                                <div class="submenu4">
+                                <!--<div class="submenu4">
                                     <ul>
                                         <li><a href="/owen/php/giatot.php">Áo sơ mi</a></li>
                                         <li><a href="/owen/php/giatot.php">Polo giá tốt</a></li>
                                         <li><a href="/owen/php/giatot.php">quần giá tốt</a></li>
                                         <li><a href="/owen/php/giatot.php">Ưu đãi đặc biệt</a></li>
                                     </ul>
-                                </div> 
+                                </div> -->
                             </li>
                             <li><a href="/owen/dangnhap/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
                             <li><a href="dangnhap.php"><i class="fas fa-heart"></i></a></li>
                             <li><i class="fas fa-user"><?php echo $_SESSION['username']; ?></i>
-                                <div class="submenu5">
+                                <!--<div class="submenu5">
                                     <ul>
                                         <li><?php echo $_SESSION['username']; ?></li>
                                         <li><a href="/owen/dangnhap/logout.php">Đăng xuất</a></li>
                                     </ul>
-                                </div>    
+                                </div> -->   
                             </li>
                             <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"></i></a></li>
                         </ul>
@@ -96,64 +111,89 @@ include("./dangnhap/auth.php");
                 </div>
             </section>
         </nav>
-        <!-------------thanh trượt slider-- không làm đc------------>
             <!--------------------slider bar--------------------->
+    <section>
             <div class="showcart">
                 <div class="showcart-bar">
-                    <div class="container">
-                        <h2>Giỏ Hàng</h2>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Sản phẩm</th>
-                                    <th>Tên Sản Phẩm</th>
-                                    <th>Size</th>
-                                    <th>Số lượng</th>
-                                    <th>Giá</th>
-                                    <th>Thành tiền</th>
-                                    <th>Xóa</th>
-                                </tr>
-                                </thead>
-                            <tbody>
-                                    <tr>
-                                <?php
-                                    $tong=0;
-                                    $i=0;
-                                foreach ($_SESSION['cart'] as $sp) {
-                                    $ttien=$sp[4]*$sp[5];
-                                    $tong+=$ttien;
-                                        echo '<tr style="text-transform: uppercase;">
-                                            <td><img src="'.$sp[1].'" width="30px"></td>
-                                            <td>'.$sp[2].'</td>
-                                            <td>'.$sp[3].'</td>
-                                            <td>'.$sp[4].'</td>  
-                                            <td>'.$sp[5].'</td>
-                                            <td>'.$ttien.'</td>
-                                            <td><a href="delcart.php?id='.$i.'">XÓA</a></td>
-                                            </tr>';
-                                        $i++;
-                                    }
-                                ?>
-                                </tr>
-                            <tr>
-                                <td colspan="5" style="border-right:2px solid #CFD3CB;">Tổng tiền</td>
-                                <td style="border-right:2px solid #CFD3CB;"><?=$tong ?></td>
-                                <td ><a href="delcart.php" >XÓA</a></td>
-                                
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <form action="bill.php" method="post">
+                                <div class="container">
+                                    <h2>Thông tin Khách hàng</h2>
+                                    <table class="table table-bordered table-sm">
+                                        <tbody>
+                                        <tr>
+                                            <td style="width: 25%;">Tên</td>
+                                            <td><input type="ten" style="width: 100%;height: 100%;text-align: left;" name="name" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 25%;">Địa chỉ</td>
+                                            <td><input type="sdt"style="width: 100%;height: 100%;text-align: left;"name="address" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 25%;">Số điện thoại</td>
+                                            <td><input type="gmail"style="width: 100%;height: 100%;text-align: left;"name="tel" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 25%;">Email</td>
+                                            <td><input type="diachi"style="width: 100%;height: 100%;text-align: left;"name="email"></td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    </div></div>
+                                <div class="col-sm-6"><div class="container">
+                                    <h2>Giỏ Hàng</h2>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Sản phẩm</th>
+                                                <th>Tên Sản Phẩm</th>
+                                                <th>Size</th>
+                                                <th>Số lượng</th>
+                                                <th>Giá</th>
+                                                <th>Thành tiền</th>
+                                            </tr>
+                                            </thead>
+                                        <tbody>
+                                                <tr>
+                                            <?php
+                                                $tong=0;
+                                                $i=0;
+                                            foreach ($_SESSION['cart'] as $sp) {
+                                                $ttien=$sp[4]*$sp[5];
+                                                $tong+=$ttien;
+                                                    echo '<tr style="text-transform: uppercase;">
+                                                        <td><img src="'.$sp[1].'" width="30px"></td>
+                                                        <td>'.$sp[2].'</td>
+                                                        <td>'.$sp[3].'</td>
+                                                        <td>'.$sp[4].'</td>  
+                                                        <td>'.$sp[5].'</td>
+                                                        <td>'.$ttien.'</td>
+                                                        </tr>';
+                                                    $i++;
+                                                }
+                                            ?>
+                                            </tr>
+                                        <tr>
+                                            <td colspan="5" style="border-right:2px solid #CFD3CB;">Tổng tiền</td>
+                                            <td style="border-right:2px solid #CFD3CB;"><?=$tong ?></td>
+                                            <td></td>
+                                            
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                        </div>
                         <table >
                             <tr>
-                                <th><a href="/owen/dangnhap/home.php" ><button>Tiếp tục mua hàng</button></a></th>
-                                <th><a href="delcart.php" ><button>Xóa giỏ hàng</button></a></th>
-                                <th><a href="order.php" ><button>Đặt hàng</button></a></th>
+                                <th><button name="dathang" >Đặt hàng</button></th>
                             </tr>
                         </table>
-                    </div>
-                </div>
+                    </form>
             </div>
-        </section>
+    </section>
         <!---------------fage footer----------------->
         <div class="fage-footer-container">
             <div class="fage-footer-container-now">

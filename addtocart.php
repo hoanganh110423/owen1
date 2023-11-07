@@ -9,31 +9,28 @@
         $gia=$_POST['gia'];
         $id=$_POST['id'];
         $size=$_POST['size'];
-        $sl=1; //$i=0; $fg=0;
+        $sl=1; $i=0; $fg=0;
         //timf sp
-            //if(isset($_SESSION['cart'])&&(count($_SESSION['cart'])>0)){
-                //foreach ($_SESSION['cart'] as $sp){
-                    //if($sp[0]==$id){
+            if(isset($_SESSION['cart'])&&(count($_SESSION['cart'])>0)){
+                foreach ($_SESSION['cart'] as $sp){
+                    if($sp[0]== $id){
                         //cập nhật sl
-                        //$sl+=$sp[4];
-                        //$fg=1;
+                        $sl += $sp[4];
+                        $fg=1;
                         // cập nhật vào giỏ hàng
-                       // $_SESSION['cart'][$i][4]=$sl;
-                        //break;
-                    //}
-                   // $i++;
-              //  }
-            //}
+                       $_SESSION['cart'][$i][4]=$sl;
+                        break;
+                    }
+                    $i++;
+                }
+            }
         //tạo mảng
-        //if($fg==0){
+        if($fg==0){
             $sp=array($id,$img,$tensp,$size,$sl,$gia);
             array_push($_SESSION['cart'],$sp);
-        //}
+        }
         //add gio hang
-        //$_SESSION['cart'][]=$sp; cach 1
-        
-        //array_push($_SESSION['cart'],$sp);
-        
+        //$_SESSION['cart'][]=$sp; cach 1     
         header('location: viewcart.php');
     }
 ?>
