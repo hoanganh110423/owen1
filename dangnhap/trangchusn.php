@@ -127,13 +127,13 @@ include("auth.php");
                         <div class="product-gallrey-1-container-product-1">
                             <form action="/owen/addtocart.php" method="post">
                                 <a href="/owen/chitiet/chitiet2.php">
-                                    <img src="/owen/image/ct2.2.jpg" alt="">
+                                    <img src="/owen/image/ct2.webp" alt="">
                                     <div class="name">Mua Ngay</div>
                                 </a>
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>AR21055DT-ÁO SƠ MI NAM</li>
                                     <!--<li><span>450.000</span><sup>đ</sup></li>-->
-                                    <input type="hidden" name="img" value="/owen/image/ct2.2.jpg">
+                                    <input type="hidden" name="img" value="/owen/image/ct2.webp">
                                     <input type="hidden" name="tensp" value="AR21055DT-ÁO SƠ MI NAM">
                                     <input type="hidden" name="gia" value="599.000">
                                     <input type="hidden" name="id" value="2">

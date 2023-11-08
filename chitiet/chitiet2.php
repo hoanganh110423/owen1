@@ -123,13 +123,13 @@ include("../dangnhap/auth.php");
             </div>
                 <div class="slider-bar-now-colum2-item">
                     <div class="slider-bar-now-colum2-item-1">
-                        <img src="/owen/image/ct2.1.webp" alt="">
+                        <img src="/owen/image/ct2.webp" alt="">
                         <div class="slider-bar-now-colum2-item-1-text">
                         </div>
                         <div class="slider-bar-now-colum2-item-1-text2">
                             <ul>
                                 <li><img src="/owen/image/ct2.2.jpg" alt=""></li>
-                                <li><img src="/owen/image/ct2.3.jpg" alt=""></li>
+                                <li><img src="/owen/image/ct2.webp" alt=""></li>
                                 <li><img src="/owen/image/ct2.4.jpg" alt=""></li>
                             </ul>
 
@@ -150,7 +150,7 @@ include("../dangnhap/auth.php");
                             </select>
                         </li>
                         <a><i class="fas fa-ruler-horizontal">Hướng dẫn chọn size</i></a>
-                        <input type="hidden" name="img" value="/owen/image/ct2.1.webp">
+                        <input type="hidden" name="img" value="/owen/image/ct2.webp">
                         <input type="hidden" name="sl" value="sl">
                         <input type="hidden" name="" value="size">
                         <input type="hidden" name="tensp" value="AR21055DT-ÁO SƠ MI NAM">
