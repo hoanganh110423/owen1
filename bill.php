@@ -1,3 +1,4 @@
+
 <?php
     include "thuvien.php";
     if(isset($_POST['dathang']) && $_POST['dathang']) {
@@ -12,7 +13,7 @@
         taodonhang($name, $address,$tel,$email,$total,$pttt);
 
     }
-        echo"bạn đã đặt hàng thành công";
+        echo'<br>Bạn đã đặt hàng thành công<br><a href ="/owen/dangnhap/trangchusn.php">Hãy chọn thêm nào</a>';
     
 
 ?>

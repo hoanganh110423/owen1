@@ -2,31 +2,6 @@
 //include auth.php file on all secure pages
 include("./dangnhap/auth.php");
 ?>
-<?php
-    //session_start();
-    if(isset($_SESSION['cart'])){
-        //echo var_dump($_SESSION['cart']);
-
-    
-?>
-<?php
-    include "thuvien.php";
-    if(isset($_POST['dathang']) && $_POST['dathang']) {
-        
-        $name=$_POST['name'];
-        $address=$_POST['address'];
-        $tel=$_POST['tel'];
-        $email=$_POST['email'];
-        $pttt=0;
-        $total=tongdonhang();
-
-        taodonhang($name, $address,$tel,$email,$total,$pttt);
-
-    }
-        echo"bạn đã đặt hàng thành công";
-    
-
-?>
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -186,9 +161,17 @@ include("./dangnhap/auth.php");
                                 </div>
                         </div>
                         </div>
+                        <script src="/owen/js/input.js"></script>
                         <table >
                             <tr>
-                                <th><button name="dathang" >Đặt hàng</button></th>
+                                <th><input type="submit" value="Đặt Hàng" class="form-submit" name ="dathang" 
+                                    style=" width: 200px;
+                                    height: 50px;
+                                    background-color: #773a596e;
+                                    border-radius: 5px;
+                                    color: #000;
+                                    font-weight: bold;
+                                    font-size: 1.2vw;"></th>
                             </tr>
                         </table>
                     </form>
@@ -271,8 +254,4 @@ include("./dangnhap/auth.php");
         </div>
     </body>
 </html>
-    <?php
-    }else{
-        echo '<br>Giỏ hàng rỗng<br><a href ="/owen/dangnhap/trangchusn.php">Tiếp tục đặt hàng</a>';
-    }
-    ?>
+    
