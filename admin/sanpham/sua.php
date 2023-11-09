@@ -3,7 +3,7 @@
     $sql_brand = "SELECT * FROM brands";
     $query_brand = mysqli_query($connect, $sql_brand);
 
-    $sql_up = "SELECT * FROM products where prd_id= $id";
+    $sql_up = "SELECT * FROM products where prd_id = $id";
     $query_up = mysqli_query($connect, $sql_up);
     $row_up = mysqli_fetch_assoc($query_up);
 
@@ -24,7 +24,7 @@
         $brand_id = $_POST['brand_id'];
 
 
-        $sql = "UPDATE products SET prd_name = '$prd_name', image = '$image', price = $price, quantity = $quantity, description = '$description', brand_id = $brand_id ";
+        $sql = "UPDATE products SET prd_name = '$prd_name', image = '$image', price = $price, quantity = $quantity, description = '$description', brand_id = $brand_id WHERE prd_id = $id ";
         $query - mysqli_query($connect, $sql);
         header('location: /owen/admin/index.php?page_layout=danhsach');
 
