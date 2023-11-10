@@ -10,30 +10,47 @@ session_start();
     </head>
 <body>
 <?php
-        require('db.php');
-        // If form submitted, insert values into the database.
-        if (isset($_POST['username'])){
+    require('db.php');
+
+    // If form submitted, insert values into the database.
+    if (isset($_POST['username'])) {
         // removes backslashes
         $username = stripslashes($_REQUEST['username']);
-        //escapes special characters in a string
-        $username = mysqli_real_escape_string($conn,$username);
+        // escapes special characters in a string
+        $username = mysqli_real_escape_string($conn, $username);
         $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($conn,$password);
-        //Checking is user existing in the database or not
-        $query = "SELECT * FROM `username` WHERE username='$username'
-        and password='".$password."'";
-        $result = mysqli_query($conn,$query) or die(mysqli_error($conn));
+        $password = mysqli_real_escape_string($conn, $password);
+
+        // Checking if user exists in the database
+        $query = "SELECT * FROM `username` WHERE username='$username' and password='$password'";
+        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
         $rows = mysqli_num_rows($result);
-        if($rows==1){
+
+        if ($rows == 1) {
             $_SESSION['username'] = $username;
-            // Redirect user to index.php
-            header("Location:/owen/dangnhap/home.php");
-        exit();
-        }else{echo "<div class='form'>
-            <h3>Tên đăng nhập hoặc tài khoản không chính xác</h3>
-        <br/>Click here to <a href='login.php'>Đăng nhập</a></div>";
-}
-}else{
+
+            // Retrieve user's role from the database
+            $roleQuery = "SELECT role FROM `username` WHERE username='$username'";
+            $roleResult = mysqli_query($conn, $roleQuery) or die(mysqli_error($conn));
+            $role = mysqli_fetch_array($roleResult)['role'];
+
+            // Redirect user based on their role
+            if ($role == 1) {
+                header("Location: /owen/dangnhap/home.php");
+            } elseif ($role == 0) {
+                header("Location: /owen/gentelella-master/backend/index.php?page=trangchu");
+            } else {
+                echo "<div class='form'>
+                    <h3>Invalid role</h3>
+                <br/>Click here to <a href='login.php'>Login</a></div>";
+            }
+            exit();
+        } else {
+            echo "<div class='form'>
+                <h3>Tên tài khoản hoặc mật khẩu không chính xác</h3>
+            <br/>Click here to <a href='login.php'>Đăng Nhập</a></div>";
+        }
+    } else {
 ?>
 <div id="wrapper">
     <form action="login.php" id="form-login" method="post">
