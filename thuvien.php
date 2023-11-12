@@ -1,5 +1,11 @@
 <?php
-
+function taogiohang($tensp,$hinhsp,$dongia,$soluong,$thanhtien,$idbill){
+    $conn=ketnoidb();
+    $sql = "INSERT INTO tbl_cart(tensp,hinhsp,dongia,soluong,thanhtien,idbill) VALUES ('$tensp','$hinhsp','$dongia','$soluong','$thanhtien','$idbill')";
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    $conn = null;
+}
 function taodonhang($name,$address,$tel,$email,$total,$pttt){
     $conn=ketnoidb();
     $sql = "INSERT INTO tbl_bill(name,address,tel,email,total,pttt) VALUES ('$name','$address','$tel','$email','$total','$pttt')";

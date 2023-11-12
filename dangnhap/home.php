@@ -67,6 +67,10 @@ include("auth.php");
                                 </div> 
                             </li>
                             <li><a href="/owen/dangnhap/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
+                            <li>
+                                <input type="text" name="search" placeholder="search">
+                                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                            </li>
                             <li><a href=""><i class="fas fa-heart"></i></a></li>
                             <li><i class="fas fa-user"></i>
                                 <div class="submenu5">

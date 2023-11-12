@@ -13,12 +13,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2><?php
-                    if(isset($_SESSION["login"])){
-                      echo $_SESSION["login"][1];
-                    }
-
-                    ?></h2>
+                <h2>Admin</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->

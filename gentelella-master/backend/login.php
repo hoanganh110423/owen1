@@ -1,5 +1,18 @@
 <?php
 session_start();
+$conn = mysqli_connect("localhost","root","","admin");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+ob_start();
+include("../Backend/db.php");
+//Kiểm tra nếu tồn tại login thì vẫn ở lại
+if(isset($_SESSION["login"])){
+  header("location:index.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +23,7 @@ session_start();
     </head>
 <body>
 <?php
-    require('db.php');
+
 
     // If form submitted, insert values into the database.
     if (isset($_POST['username'])) {

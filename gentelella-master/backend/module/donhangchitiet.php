@@ -1,3 +1,20 @@
+<?php
+// Nhập Máy chủ, tên người dùng, mật khẩu, cơ sở dữ liệu bên dưới.
+// Tôi để trống mật khẩu vì tôi không đặt mật khẩu trên localhost.
+$conn = mysqli_connect("localhost","root","","admin");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+?>
+<?php 
+  if(isset($_GET["id"]) && isset($_GET["del"]) ){
+    $sqlDelete = "DELETE FROM tbl_cart WHERE id=".$_GET["id"];
+     mysqli_query($conn, $sqlDelete) or die("Lỗi xóa") ;
+     header("location:/owen/gentelella-master/backend/index.php?page=donhangchitiet");
+ }
+?>
 <div class="x_panel">
                   <div class="x_title">
                     <h2>Đơn hàng chi tiết</h2>
@@ -17,15 +34,6 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                  <?php
-                    if(isset($_GET["id"]) && isset($_GET["del"]) ){
-                        mysqli_error($conn);
-                        $sqlDelete = "DELETE FROM hoadonchitiet WHERE idhdct=".$_GET["id"];
-                        mysqli_query($conn, $sqlDelete) or die(mysqli_error($conn)) ;
-                        header("location:index.php?page=donhangchitiet");
-                    }
-                    ?>
-
                     <table class="table table-bordered">
                       <thead>
                         <tr>
@@ -35,40 +43,34 @@
                           <th>Số lượng</th>
                           <th>Giá</th>
                           <th>Tổng tiền</th>
+                          <th>#</th>
                         </tr>
                       </thead>
                       <?php
                     //lệnh truy vấn
-                      $sqlSelect = "SELECT * FROM hoadonchitiet";
-                      $resultdonhangchitiet = mysqli_query($conn, $sqlSelect)  or die("Lỗi truy vấn dữ liệu");
-                      if (mysqli_num_rows($resultdonhangchitiet) > 0) {
+                    $sqlSelect = "SELECT * FROM tbl_cart";
+                    $resultdonhang = mysqli_query($conn, $sqlSelect)  or die("Lỗi truy vấn dữ liệu");
+                    if (mysqli_num_rows($resultdonhang) > 0) {
                         $i = 0;
-                        while ($rowdonhangchitiet = mysqli_fetch_assoc($resultdonhangchitiet)) {
+                        while ($row = mysqli_fetch_assoc($resultdonhang)) {
                             $i++;
-                            $idsp = $rowdonhangchitiet["idsp"];
-                            //lệnh truy vấn
-                            $sqlSelect = "SELECT * FROM sanpham WHERE idsp = $idsp ";
-                            $resulthoadon = mysqli_query($conn, $sqlSelect)  or die("Lỗi truy vấn dữ liệu");
-                            if (mysqli_num_rows($resulthoadon) > 0) {
-                            while ($rowhoadon = mysqli_fetch_assoc($resulthoadon)) {
-                            $tongtien = $rowdonhangchitiet["soluong"] * $rowdonhangchitiet["gia"];
                     ?>
-                      <tbody>
                         <tr>
                           <th ><?php echo $i ?></th>
                           <td>
-                                    <img src="../<?php echo $rowhoadon["anhsp"]; ?>" width="100px" height="100px">
+                            <img style="width: 100px;" src="<?php echo $row['hinhsp']; ?>" >
                           </td>
-                          <td><?php echo $rowhoadon["tensp"]; ?></td>
-                          <td><?php echo $rowdonhangchitiet["soluong"]; ?></td>
-                          <td><?php echo $rowdonhangchitiet["gia"]; ?></td>
-                          <td><?php echo $tongtien; ?></td>
+                          <td><?php echo $row["tensp"] ?></td>
+                          <td><?php echo $row["soluong"] ?></td>
+                          <td><?php echo $row["dongia"] ?></td>
+                          <td><?php echo $row["thanhtien"] ?></td>
                           <td>
-                          <a href="index.php?page=donhangchitiet&id=<?php echo $rowdonhangchitiet["idhdct"] ?>&del=1"onclick="return confirm('Bạn có chắc chắn xóa bản ghi này không?');"><i class="fa fa-trash-o">Xóa</i></a>
+                            <a href="/owen/gentelella-master/backend/index.php?page=donhangchitiet&id=<?php echo $row["id"] ?>&del=1" onclick="return confirm('Bạn có chắc chắn xóa bản ghi này không?');"><i class="fa fa-trash-o">Xóa</i></a>
                           </td>
-                        </tr>
+                        </tr>                      
                       </tbody>
-                      <?php }} }} ?>
+                    
+                      <?php }} ?>
                     </table>
 
                   </div>

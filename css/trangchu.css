@@ -48,7 +48,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 405px;
+    left: 342px;
 }
 .submenu1 ul {
     display: flex;
@@ -82,7 +82,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 537px;
+    left: 444px;
   
 }
 .submenu2 ul {
@@ -96,7 +96,8 @@ h2{
 }
 .submenu2 ul li {
    
-    padding: 10px 0; 
+    padding: 10px 0;
+   
 }
 .submenu2 ul li a{
     color: #000;
@@ -118,7 +119,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 685px;
+    left: 565px;
 }
 .submenu3 ul {
     display: flex;
@@ -152,7 +153,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 855px;
+    left: 705px;
 }
 .submenu4 ul {
     display: flex;
@@ -177,9 +178,9 @@ h2{
 .submenu4 ul li:hover a {
     color: #CBB16A;
     background: none;
-}
+}/*------------submenu-----------------*/
 
-/*----------------------------------*/
+/*----------------submenu5--------------------*/
 .submenu5{
     color: #333;
     position: absolute;
@@ -187,7 +188,7 @@ h2{
     width: 170px;
     height: auto;
     display: none;
-    left: 1285px;
+    left: 1321px;
 }
 .submenu5 ul {
     display: flex;
@@ -207,7 +208,7 @@ h2{
 .menu-ba-container ul li:hover .submenu5{
     display: block;
     background-color: aliceblue;
-    /*border-radius: 5px;*/
+    border-radius: 5px;
 }
 .submenu5 ul li:hover a {
     color: #CBB16A;
