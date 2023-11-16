@@ -1,11 +1,10 @@
 <?php
-//include auth.php file on all secure pages
-include("../dangnhap/auth.php");
-$conn = mysqli_connect("localhost","root","","owen");
-// Check connection
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
+// Kết nối với cơ sở dữ liệu
+$conn = mysqli_connect("localhost", "root", "", "owen");
+session_start();
+if (isset($_POST['search'])) {
+    // Get the search query from the form
+    $noidung = $_POST['noidung'];
 }
 ?>
 <!DOCTYPE html>
@@ -13,7 +12,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Quần </title>
+    <title>Tìm kiếm sản phẩm </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='/owen/css/hangmoive.css'>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
@@ -90,6 +89,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                 <button type="submit" name="search" onclick="showProduct()" class="search" value="Tìm kiếm"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </li>
+                        <li><a href=""><i class="fas fa-heart"></i></a></li>
                         <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a>
                             <div class="submenu5">
                                 <ul>
@@ -146,96 +146,35 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                 <div class="slider-bar-now-colum2-item">
                     <div class="container">
                         <div class="product-gallrey-1-container">
-                            <div class="product-gallrey-1-container-product">
+                            <div class="product-gallrey-1-container-product" style="">
+                                <?php
+                                $sql = "SELECT * FROM products WHERE prd_name LIKE '%$noidung%' OR price LIKE '%$noidung%'";
+                                $result = $conn->query($sql);
+                                if ($result->num_rows > 0) {
+                                ?>
+                                        <?php
+                                        while ($row = $result->fetch_assoc()) {
+                                            $productURL = "/owen/php/chitiet.php?idsp=" . $row['prd_id'];
+                                        ?>
                                 <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quan1.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a>
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>ÁO SƠ MI</li>
-                                        <!--<li><span>300.000</span><sup>đ</sup></li>-->
-                                    </div>
+                                    <?php  
+                                        echo "<div class=\"product-item\">
+                                            <a href=\"/owen/php/chitiet.php?id=$row[prd_id]\">
+                                                <img src=\"image/$row[image]\" alt=\"$row[prd_name]\">
+                                                <p>$row[prd_name]</p>
+                                                <p>Giá: $row[price]đ</p>
+                                            </a>
+                                        </div>"; 
+                                    ?>
                                 </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần2.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a>
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>ÁO SƠ MI NAM </li>
-                                        <!--<li><span>350.000</span><sup>đ</sup></li>-->
-                                    </div>
-                                </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần3.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a> 
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>ÁO SƠ MI3 </li>
-                                        <!--<li><span>400.000</span><sup>đ</sup></li>-->
-                                    </div>
-                                </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần4.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a>
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>ÁO SƠ MI LỬNG </li>
-                                        <!--<li><span>350.000</span><sup>đ</sup></li>-->
-                                    </div>
-                                </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần5.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a>
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>ÁO POLO </li>
-                                        <!--<li><span>250.000</span><sup>đ</sup></li>-->
-                                    </div>
-                                </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần6.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a>
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>QUẦN TÂY 1 </li>
-                                        <!--<li><span>350.000</span><sup>đ</sup></li>-->
-                                    </div>
-                                </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần7.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a> 
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>QUẦN TÂY 2</li>
-                                        <!--<li><span>400.000</span><sup>đ</sup></li>-->
-                                    </div>
-                                </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần8.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a>
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>QUẦN SHORT</li>
-                                        <!--<li><span>450.000</span><sup>đ</sup></li>-->
-                                    </div>
-                                </div>
-                                <div class="product-gallrey-1-container-product-1">
-                                    <a href="/owen/php/chitiet.php">
-                                        <img src="/owen/image/quần9.webp" alt="">
-                                        <div class="name">Mua Ngay</div>
-                                    </a>
-                                    <div class="product-gallrey-1-container-product-1-text">
-                                        <li>QUẦN TÂY 3</li>
-                                        <!--<li><span>500.000</span><sup>đ</sup></li>-->
-                                    </div>
+                                <?php
+                                        }
+                                    } else {
+                                        echo '<div class="not-item">
+                                            <p>Không sản phẩm nào được tìm thấy!</p>
+                                        </div>';
+                                    }
+                                ?>
                                 </div>
                             </div>
                         </div>
@@ -318,8 +257,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
             </div>
         </div>
         <div class="admin">
-            <p>Hỗ trợ làm web liên hệ : Hoàng Anh</p>
+            <p>Hỗ trợ làm web liên hệ : Hoàng Anh </p>
         </div>
 </body>
 </html>
-<script src="/owen/js/search.js"></script>

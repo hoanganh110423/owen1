@@ -12,15 +12,16 @@ if (isset($_POST['dathang']) && $_POST['dathang']) {
 
     $idbill = taodonhang($name, $address, $tel, $email, $total, $pttt);
     for ($i = 0; $i < sizeof($_SESSION['cart']); $i++) {
-        $tensp = $_SESSION['cart'][$i][0];
+        $tensp = $_SESSION['cart'][$i][2];
         $hinhsp = $_SESSION['cart'][$i][1];
-        $dongia = $_SESSION['cart'][$i][2];
-        $soluong = $_SESSION['cart'][$i][3];
-
+        $dongia = $_SESSION['cart'][$i][5];
+        $soluong = $_SESSION['cart'][$i][4];
+        $$idbill = $_SESSION['cart'][$i][0];
+        $size = $_SESSION['cart'][$i][3];
         // Convert the $dongia and $soluong variables to integers before multiplying them
         $thanhtien = intval($dongia) * intval($soluong);
 
-        taogiohang($tensp, $hinhsp, $dongia, $soluong, $thanhtien, $idbill);
+        taogiohang($tensp, $hinhsp, $dongia, $soluong, $thanhtien, $idbill, $size);
     }
 
 }

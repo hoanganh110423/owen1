@@ -1,7 +1,7 @@
 <?php
-function taogiohang($tensp,$hinhsp,$dongia,$soluong,$thanhtien,$idbill){
+function taogiohang($tensp,$hinhsp,$dongia,$soluong,$thanhtien,$idbill,$size){
     $conn=ketnoidb();
-    $sql = "INSERT INTO tbl_cart(tensp,hinhsp,dongia,soluong,thanhtien,idbill) VALUES ('$tensp','$hinhsp','$dongia','$soluong','$thanhtien','$idbill')";
+    $sql = "INSERT INTO tbl_cart(tensp,hinhsp,dongia,soluong,thanhtien,idbill,size) VALUES ('$tensp','$hinhsp','$dongia','$soluong','$thanhtien','$idbill','size')";
     // use exec() because no results are returned
     $conn->exec($sql);
     $conn = null;
@@ -19,7 +19,7 @@ function ketnoidb(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "admin";
+    $dbname = "owen";
     
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

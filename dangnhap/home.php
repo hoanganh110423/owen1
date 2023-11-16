@@ -1,6 +1,12 @@
 <?php
 //include auth.php file on all secure pages
 include("auth.php");
+$conn = mysqli_connect("localhost","root","","owen");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -66,10 +72,23 @@ include("auth.php");
                                     </ul>
                                 </div> 
                             </li>
+                            <li><?php 
+                                        $sqlSelect = "SELECT * FROM danhmuc ";
+                                        $resultSelect = mysqli_query($conn, $sqlSelect) or die(mysqli_error($conn));
+                                        if(mysqli_num_rows($resultSelect) > 0){
+                                            $count = 0;
+                                            while($row = mysqli_fetch_assoc($resultSelect)){
+                                                $count++;
+                            ?>
+                        <li class="drink1"><a href="trangchusn.php?page=1&id=<?php echo $row["iddm"] ?>"><?php echo $row["tendm"] ?></a></li>
+                        <?php }} ?>
+                            </li>
                             <li><a href="/owen/dangnhap/trangchusn.php" style="color: #333;">CỬA HÀNG</a></li>
                             <li>
-                                <input type="text" name="search" placeholder="search">
-                                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                                <form action="/owen/timkiem.php" method="POST" class="search-form">
+                                    <input type="text" name="noidung" class="search" placeholder="Tìm kiếm sản phẩm">
+                                    <button type="submit" name="search" onclick="showProduct()" class="search" value="Tìm kiếm"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
                             </li>
                             <li><a href=""><i class="fas fa-heart"></i></a></li>
                             <li><i class="fas fa-user"></i>
@@ -131,13 +150,13 @@ include("auth.php");
                         <div class="product-gallrey-1-container-product-1">
                             <form action="/owen/addtocart.php" method="post">
                                 <a href="/owen/chitiet/chitiet2.php">
-                                    <img src="/owen/image/ct2.2.jpg" alt="">
+                                    <img src="/owen/image/ct2.webp" alt="">
                                     <div class="name">Mua Ngay</div>
                                 </a>
                                 <div class="product-gallrey-1-container-product-1-text">
                                     <li>AR21055DT-ÁO SƠ MI NAM</li>
                                     <!--<li><span>450.000</span><sup>đ</sup></li>-->
-                                    <input type="hidden" name="img" value="/owen/image/ct2.2.jpg">
+                                    <input type="hidden" name="img" value="/owen/image/ct2.webp">
                                     <input type="hidden" name="tensp" value="AR21055DT-ÁO SƠ MI NAM">
                                     <input type="hidden" name="gia" value="450000">
                                     <input type="hidden" name="id" value="2">
@@ -357,3 +376,4 @@ include("auth.php");
         </div>
     </body>
 </html>
+<script src="/owen/js/search.js"></script>

@@ -1,7 +1,7 @@
 <?php
 // Nhập Máy chủ, tên người dùng, mật khẩu, cơ sở dữ liệu bên dưới.
 // Tôi để trống mật khẩu vì tôi không đặt mật khẩu trên localhost.
-$conn = mysqli_connect("localhost","root","","admin");
+$conn = mysqli_connect("localhost","root","","owen");
 // Check connection
 if (mysqli_connect_errno())
 {
@@ -35,6 +35,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                           <td>Số điện thoại</td>
                           <td>Địa chỉ</td>
                           <td>Email</td>
+                          <td>ID bill</td>
                           <td>#</td>
                         </tr>
                       </thead>
@@ -54,6 +55,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                           <td><?php echo $row["tel"] ?></td>
                           <td><?php echo $row["address"] ?></td>
                           <td><?php echo $row["email"] ?></td>
+                          <td><?php echo $row["id"] ?></td>
                           <td>
                             <a href="/owen/gentelella-master/backend/index.php?page=donhang&id=<?php echo $row["id"] ?>&del=1" onclick="return confirm('Bạn có chắc chắn xóa bản ghi này không?');"><i class="fa fa-trash-o">Xóa</i></a>
                           </td>

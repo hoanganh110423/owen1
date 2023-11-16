@@ -1,7 +1,7 @@
 <?php
 // Nhập Máy chủ, tên người dùng, mật khẩu, cơ sở dữ liệu bên dưới.
 // Tôi để trống mật khẩu vì tôi không đặt mật khẩu trên localhost.
-$connect = mysqli_connect("localhost","root","","php");
+$connect = mysqli_connect("localhost","root","","owen");
 // Check connection
 if ($connect){
     mysqli_query($connect, "SET NAMES 'UTF8'");
@@ -37,7 +37,7 @@ if ($connect){
 
         $sql = "UPDATE products SET prd_name = '$prd_name', image = '$image', price = $price, quantity = $quantity, description = '$description', brand_id = $brand_id WHERE prd_id = $id ";
         $query - mysqli_query($connect, $sql);
-        header('location: http://localhost/owen/gentelella-master/backend/index.php?page=danhsachsanpham');
+        header('location: /owen/gentelella-master/backend/index.php?page=danhsachsanpham');
 
     }
 

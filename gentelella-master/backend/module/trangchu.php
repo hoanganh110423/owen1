@@ -1,14 +1,14 @@
 <?php
 // Nhập Máy chủ, tên người dùng, mật khẩu, cơ sở dữ liệu bên dưới.
 // Tôi để trống mật khẩu vì tôi không đặt mật khẩu trên localhost.
-$conn = mysqli_connect("localhost","root","","admin");
+$conn = mysqli_connect("localhost","root","","owen");
 // Check connection
 if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 ?>
-<div class="row" style="display: inline-block;">
+<!-- <div class="row" style="display: inline-block;"> -->
     <div class="tile_count">
         <?php
         $sqlSelect = "SELECT * FROM username";
@@ -25,12 +25,12 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     <div class="count"><?php echo $i ?></div>
         </div>
         <?php 
-         $sqlSelect = "SELECT * FROM hoadonchitiet";
-         $resultdonhangchitiet = mysqli_query($conn, $sqlSelect)  or die("Lỗi truy vấn dữ liệu");
-         if (mysqli_num_rows($resultdonhangchitiet) > 0) {
+         $sqlSelect = "SELECT * FROM tbl_cart";
+         $resultdonhang = mysqli_query($conn, $sqlSelect)  or die("Lỗi truy vấn dữ liệu");
+         if (mysqli_num_rows($resultdonhang) > 0) {
            $soluong = 0;
-           while ($rowdonhangchitiet = mysqli_fetch_assoc($resultdonhangchitiet)) {
-               $soluong += $rowdonhangchitiet["soluong"];
+           while ($rowtbl_cart = mysqli_fetch_assoc($resultdonhang)) {
+               $soluong += $rowtbl_cart["soluong"];
            }
         }
         ?>
@@ -40,12 +40,12 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
             <span class="count_bottom">sản phẩm</span>
         </div>
         <?php 
-          $sqlSelect = "SELECT * FROM hoadonchitiet";
-          $resultdonhangchitiet = mysqli_query($conn, $sqlSelect)  or die("Lỗi truy vấn dữ liệu");
-          if (mysqli_num_rows($resultdonhangchitiet) > 0) {
+          $sqlSelect = "SELECT * FROM tbl_cart";
+          $resultdonhang = mysqli_query($conn, $sqlSelect)  or die("Lỗi truy vấn dữ liệu");
+          if (mysqli_num_rows($resultdonhang) > 0) {
             $tongtien = 0;
-            while ($rowdonhangchitiet = mysqli_fetch_assoc($resultdonhangchitiet)) {
-                $tongtien = $rowdonhangchitiet["gia"] * $rowdonhangchitiet["soluong"];
+            while ($rowtbl_cart = mysqli_fetch_assoc($resultdonhang)) {
+                $tongtien = $rowtbl_cart["dongia"] * $rowtbl_cart["soluong"];
             }
         }
         ?>
@@ -64,4 +64,4 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
         </div>
     </div>
-</div>
+<!-- </div> -->

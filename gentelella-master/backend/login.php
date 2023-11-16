@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost","root","","admin");
+$conn = mysqli_connect("localhost","root","","owen");
 // Check connection
 if (mysqli_connect_errno())
 {
@@ -51,7 +51,7 @@ if(isset($_SESSION["login"])){
             if ($role == 1) {
                 header("Location: /owen/dangnhap/home.php");
             } elseif ($role == 0) {
-                header("Location: /owen/gentelella-master/backend/index.php");
+                header("Location: /owen/gentelella-master/backend/index.php?page=trangchu");
             } else {
                 echo "<div class='form'>
                     <h3>Invalid role</h3>

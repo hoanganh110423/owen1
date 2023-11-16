@@ -1,7 +1,7 @@
 <?php
 // Nhập Máy chủ, tên người dùng, mật khẩu, cơ sở dữ liệu bên dưới.
 // Tôi để trống mật khẩu vì tôi không đặt mật khẩu trên localhost.
-$connect = mysqli_connect("localhost","root","","php");
+$connect = mysqli_connect("localhost","root","","owen");
 // Check connection
 if ($connect){
     mysqli_query($connect, "SET NAMES 'UTF8'");
@@ -24,8 +24,8 @@ if ($connect){
         $brand_id = $_POST['brand_id'];
 
 
-        $sql = "INSERT INTO products (prd_name, image, price, quantity, description, brand_id)
-        VALUES('$prd_name', '$image',  $price,  $quantity, '$description', $brand_id)";
+        $sql = "INSERT INTO products (prd_name, image, price, quantity, description, brand_id,prd_id)
+        VALUES('$prd_name', '$image',  $price,  $quantity, '$description', $brand_id,'$prd_id')";
         $query - mysqli_query($connect, $sql);
         move_uploaded_file($image_tmp, 'img/'.$image);
         header('location: /owen/gentelella-master/backend/index.php?page=danhsachsanpham');
