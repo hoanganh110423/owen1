@@ -41,7 +41,6 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                           <th>Ảnh sản phẩm</th>
                           <th>Tên sản phẩm</th>
                           <th>Số lượng</th>
-                          <th>Size</th>
                           <th>Giá</th>
                           <th>Tổng tiền</th>
                           <th>Id bill</th>
@@ -64,7 +63,6 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                           </td>
                           <td><?php echo $row["tensp"] ?></td>
                           <td><?php echo $row["soluong"] ?></td>
-                          <td><?php echo $row["size"] ?></td>
                           <td><?php echo $row["dongia"] ?></td>
                           <td><?php echo $row["thanhtien"] ?></td>
                           <td><?php echo $row["idbill"] ?></td>

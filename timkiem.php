@@ -146,7 +146,7 @@ if (isset($_POST['search'])) {
                 <div class="slider-bar-now-colum2-item">
                     <div class="container">
                         <div class="product-gallrey-1-container">
-                            <div class="product-gallrey-1-container-product" style="">
+                            <div class="product-gallrey-1-container-product">
                                 <?php
                                 $sql = "SELECT * FROM products WHERE prd_name LIKE '%$noidung%' OR price LIKE '%$noidung%'";
                                 $result = $conn->query($sql);

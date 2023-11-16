@@ -2,7 +2,7 @@
     //include auth.php file on all secure pages
     include("../dangnhap/auth.php");
         $conn = mysqli_connect("localhost","root","","owen");
-    // Check connection
+        $danhmucID = $_GET['prd_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,48 +140,77 @@
                             </ul>
                     </div>
             </div>
-                <div class="slider-bar-now-colum2-item">
+            <div class="slider-bar-now-colum2-item">
                     <div class="container">
                         <div class="product-gallrey-1-container">
                             <div class="product-gallrey-1-container-product">
-                                <div class="product-gallrey-1-container-product-1">
-                                        <a href="/owen/php/chitiet.php">
-                                            <img src="/owen/image/ao1.webp" alt="">
-                                            <div class="name">Mua Ngay</div>
-                                        </a>
-                                        <div class="product-gallrey-1-container-product-1-text">
-                                            <li>ÁO SƠ MI </li>
-                                            <!--<li><span>580.000</span><sup>đ</sup></li>-->
-                                        </div>
-                                    </div>
-                                    <div class="product-gallrey-1-container-product-1">
-                                        <a href="/owen/php/chitiet.php">
-                                            <img src="/owen/image/ao2.webp" alt="">
-                                            <div class="name">Mua Ngay</div>
-                                        </a>
-                                        <div class="product-gallrey-1-container-product-1-text">
-                                            <li>ÁO SƠ MI NAM </li>
-                                            <!--<li><span>500.000</span><sup>đ</sup></li>-->
-                                        </div>
-                                    </div>
-                                    <div class="product-gallrey-1-container-product-1">
-                                        <a href="/owen/php/chitiet.php">
-                                            <img src="/owen/image/ao3.webp" alt="">
-                                            <div class="name">Mua Ngay</div>
-                                        </a> 
-                                        <div class="product-gallrey-1-container-product-1-text">
-                                            <li>ÁO SƠ MI3 </li>
-                                            <!--<li><span>350.000</span><sup>đ</sup></li>-->
-                                        </div>
-                                    </div>
+                            <?php
+                if ($danhmucID > 0) {
+                ?>
+                        <?php
+                        $sql = "SELECT * FROM products WHERE prd_id=$danhmucID";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                $productURL = "productdetails.php?idsp=" . $row['prd_id'];
+                        ?>
+                                  <div class="product-gallrey-1-container-product-1">
+                                    <?php  
+                                        echo "<div class=\"product-item\">
+                                            <a href=\"/owen/php/chitiet.php?id=$row[prd_id]\">
+                                                <img src=\"/owen/image/$row[image]\" alt=\"$row[prd_name]\">
+                                                <p>$row[prd_name]</p>
+                                                <p>Giá: $row[price]đ</p>
+                                            </a>
+                                        </div>"; 
+                                    ?>
+                                </div>
+                            <?php
+                            }
+                        } else {
+                            ?>
+                            <div class="not-item">
+                                <p>Không có sản phẩm trong danh mục này.</p>
+                            </div>
+                        <?php
+                        }
+                    } else {
+                        ?>
+                            <?php
+                            $sql = "SELECT * FROM products";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    $productURL = "productdetails.php?idsp=" . $row['prd_id'];
+                            ?>
+                                  <div class="product-gallrey-1-container-product-1">
+                                    <?php  
+                                        echo "<div class=\"product-item\">
+                                            <a href=\"/owen/php/chitiet.php?id=$row[prd_id]\">
+                                                <img src=\"/owen/image/$row[image]\" alt=\"$row[prd_name]\">
+                                                <p>$row[prd_name]</p>
+                                                <p>Giá: $row[price]đ</p>
+                                            </a>
+                                        </div>"; 
+                                    ?>
+                                </div>
+                                <?php
+                                }
+                            } else {
+                                ?>
+                                <div class="not-item">
+                                    <p>Không có sản phẩm trong danh mục này.</p>
+                                </div>
+                        <?php
+                            }
+                        }
+                        ?>
+                        </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-        </div>
     </section>
     <!---------------fage footer----------------->
         <div class="fage-footer-container">
@@ -260,4 +289,5 @@
         </div>
 </body>
 </html>
+<script src="/owen/js/sanpham.js"></script>
 <script src="/owen/js/search.js"></script>
