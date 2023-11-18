@@ -32,14 +32,6 @@ img{
 nav ul li input{
     border-radius: 5px ;
 }
-h2{
-    text-align: center;
-    color: #000;
-    text-decoration: none;
-    background-color: #CFD3CB;
-    line-height: 130px;
-    height: 135px;
-}
 /*-----------submenu1------------------*/
 .submenu1{
     color: #333;

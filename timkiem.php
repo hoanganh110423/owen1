@@ -104,7 +104,7 @@ if (isset($_POST['search'])) {
             </div>
         </section>
     </nav>
-    <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="/owen/php/hangmoive.php" style="text-align: center;">Ở ĐÂY</a></h2>
+    <h2 style="text-align: center; font-family: monospace">Sản Phẩm tìm kiếm</h2>
     <section class="product-gallrey-1">
         <div class="container">
             <div class="product-gallrey-1-container">

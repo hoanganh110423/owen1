@@ -105,7 +105,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
             </div>
         </section>
     </nav>
-    <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="/owen/php/hangmoive.php" style="text-align: center;">Ở ĐÂY</a></h2>
+    <img src="/owen/image/slidergiatot.jpg" style="width: 85%; padding: 10px; margin: 30px 110px; object-fit: cover;">
     <section class="product-gallrey-1">
         <div class="container">
             <div class="product-gallrey-1-container">

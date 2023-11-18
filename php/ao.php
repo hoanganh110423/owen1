@@ -2,7 +2,7 @@
     //include auth.php file on all secure pages
     include("../dangnhap/auth.php");
         $conn = mysqli_connect("localhost","root","","owen");
-        $danhmucID = $_GET['prd_id'];
+        $danhmucID = $_GET['prd_id'] ?? 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +101,8 @@
             </div>
         </section>
     </nav>
-    <h2>GIAO MÙA MỚI -GHÉ QUA OWEN <a href="/owen/php/hangmoive.php" style="text-align: center;">Ở ĐÂY</a></h2>
+    <!-- <h2 style=" font-family: monospace">Áo</h2> -->
+    <img src="/owen/image/sliderao.jpg" style="width: 85%; padding: 10px; margin: 30px 110px; object-fit: cover;">
     <section class="product-gallrey-1">
         <div class="container">
             <div class="product-gallrey-1-container">
@@ -143,7 +144,7 @@
             <div class="slider-bar-now-colum2-item">
                     <div class="container">
                         <div class="product-gallrey-1-container">
-                            <div class="product-gallrey-1-container-product">
+                            <div class="product-gallrey-1-container-product" style="color">
                             <?php
                 if ($danhmucID > 0) {
                 ?>
