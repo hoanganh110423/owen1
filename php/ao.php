@@ -144,7 +144,7 @@
             <div class="slider-bar-now-colum2-item">
                     <div class="container">
                         <div class="product-gallrey-1-container">
-                            <div class="product-gallrey-1-container-product" style="color">
+                            <div class="product-gallrey-1-container-product" style="color: #000;text-transform: uppercase;">
                             <?php
                 if ($danhmucID > 0) {
                 ?>

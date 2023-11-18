@@ -4,7 +4,8 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: system-ui;
+    color: #000;
 }
 header{
     text-align: center;

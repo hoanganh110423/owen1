@@ -105,7 +105,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                 </div>
             </section>
         </nav>
-        <h2 style="text-align: center; font-family: monospace">GIAO MÙA MỚI -GHÉ QUA OWEN <a href="/owen/php/hangmoive.php"style="text-align: center; font-family: monospace">Ở ĐÂY</a></h2>
+        <h2 style="text-align: center; font-family: monospace">GIAO MÙA MỚI -GHÉ QUA OWEN <a href="/owen/php/hangmoive.php"style="text-align: center; font-family: monospace; color: #4E9997;">Ở ĐÂY</a></h2>
         <!-------------thanh trượt slider-- không làm đc------------>
         
         <section class="slider">
