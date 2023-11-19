@@ -42,8 +42,6 @@ include("./dangnhap/auth.php");
                                         <li><a href="/owen/php/ao.php">Áo polo</a></li>
                                         <li><a href="/owen/php/ao.php">Áo jetket</a></li>
                                         <li><a href="/owen/php/ao.php">Áo len</a></li>
-                                        <li><a href="/owen/php/ao.php">Áo veston</a></li>
-                                        <li><a href="/owen/php/ao.php">Áo blazer</a></li>
                                     </ul>
                                 </div> 
                             </li>
@@ -90,7 +88,7 @@ include("./dangnhap/auth.php");
                                     </ul>
                                 </div>    
                             </li>
-                            <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"></i></a></li>
+                            <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"  style="color:#000;"></i></a></li>
                         </ul>
 
                     </div>

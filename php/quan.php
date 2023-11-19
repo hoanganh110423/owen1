@@ -90,7 +90,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                 <button type="submit" name="search" onclick="showProduct()" class="search" value="Tìm kiếm"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </li>
-                        <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a>
+                        <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"  style="color:#000;"></i></a>
                             <div class="submenu5">
                                 <ul>
                                     <li><?php echo $_SESSION['username']; ?></li>
@@ -98,7 +98,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"></i></a></li>
+                        <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"  style="color:#000;"></i></a></li>
                     </ul>
                 </div>
             </div>

@@ -91,7 +91,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                             </form>
                         </li>
                         <li><a href=""><i class="fas fa-heart"></i></a></li>
-                        <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"></i></a>
+                        <li><a href="/owen/admin/tranglogin.php"><i class="fas fa-user"  style="color:#000;"></i></a>
                             <div class="submenu5">
                                 <ul>
                                     <li><?php echo $_SESSION['username']; ?></li>
@@ -99,7 +99,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"></i></a></li>
+                        <li><a href="/owen/viewcart.php"><i class="fas fa-cart-plus"  style="color:#000;"></i></a></li>
                     </ul>
                 </div>
             </div>
